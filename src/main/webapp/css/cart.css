@@ -1,0 +1,148 @@
+
+section#righ .cart_top ul{
+    display: inline-block;
+}
+
+section#right .cart_top #cart_title{
+    padding-bottom: 10px;
+    border-bottom: #cccccc 1px solid;	
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+section#right .cart_top #process {
+    margin-bottom: 30px;
+    color: #cccccc;
+    font-size: 18px;
+}
+section#right .cart_top #process span {
+    color: rgb(247, 25, 25);
+}
+section#right table {
+    width:100%;
+    margin:10px 0 0 0;
+    border-collapse:collapse;
+    border-top:solid 2px #cccccc;	
+    border-bottom:solid 2px #cccccc;		
+}
+section#right tr.title {
+    height:50px;
+    font-size: 14px;
+    text-align: center;
+    background-color:#e9e8e9;
+}
+section#right th {
+    padding:10px;
+    border-bottom:solid 1px #dbdbdb;		
+}
+section#right tr.items {
+    height:80px;
+    border-bottom:solid 2px #cccccc;
+}
+section#right tr.items td {
+    padding:5px;
+    text-align: center;
+    border-bottom:solid 2px #cccccc;
+    font-size: 13px;
+}
+section#right tr.items .col1 {
+    width:50px;
+    text-align:center;
+}
+section#right tr.items #left{
+    text-align: left;
+    padding-left: 20px;
+}
+section#right tr.items .col2 div{
+    display:inline-block;
+    padding-left: 20px;
+}
+section#right tr.items .col2 img{
+    width: 150px;
+}
+section#right tr.items .coladd {
+    width: 300px;
+    text-align: left;
+}
+section#right tr.items .col2 {
+    width:100px;
+}
+section#right tr.items .col3 {
+    width:100px;
+    text-align:center;
+}
+section#right tr.items .col4 {
+    width:80px;
+    text-align:center;
+}
+section#right tr.items .col5 {
+    width:100px;
+    text-align:center;
+}
+section#right tr.items .col6 {
+    width:100px;
+    text-align:center;
+}
+section#right tr.items .col7 {
+    width:110px;
+    text-align:center;
+}
+section#right tr.total_price {
+    height:80px;
+}
+
+section#right tr.order_status_box {
+    height:120px;
+    font-size: 13px;
+    background-color:#e9e8e9;
+    border-top:solid 2px #cccccc;	
+}
+section#right .order_status_box td {
+    vertical-align:top;
+}
+section#right .order_status {
+    position:relative;
+}
+section#right .order_status p {
+    position:absolute;
+    font-size: 20px;
+    top:40px;
+    left:200px;
+}
+section#right .order_status div {
+    position:absolute;
+    top:20px;
+    left:600px;
+}
+section#right .order_status li {
+    display:inline-block;
+    margin:2px 0;
+}
+section#right .order_status .col1 {
+    width:150px;
+    text-align:right;
+}
+section#right .order_status .col2 {
+    width:80px;
+    text-align:right;	
+}
+section#right table span {
+    font-weight:bold;
+}
+section#right #order_buttons {
+    margin:50px 0 100px 0;
+    text-align:center;
+}
+section#right #order_buttons li {
+    display:inline;
+}
+section#right #order_buttons li img{
+    width: 200px;
+}
+/*order.html*/
+section#right #pay_buttons {
+    margin:50px 0 100px 0;
+    text-align:center;
+}
+section#right #pay_buttons li img{
+    width: 200px;
+}
