@@ -5,9 +5,9 @@
   <title>pop games</title>
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/index.js"></script>
-  <link rel="shortcut icon" type="image⁄x-icon" href="../img/favicon.ico">
-  <link href="../css/common.css" rel="stylesheet" type="text/css">
-  <link href="../css/join.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" type="image⁄x-icon" href="/img/favicon.ico">
+  <link href="/css/common.css" rel="stylesheet" type="text/css">
+  <link href="/css/join.css" rel="stylesheet" type="text/css">
   <script> 
     $(document).ready(function(){
       var height = $(".header_bottom").height();
@@ -34,7 +34,7 @@
   
   <div id="container">
     <a name="top"></a>
-    <%@ include file="header.jsp" %>
+    <%@ include file="/header.jsp" %>
      <main class="main">
       <ul class="section_name">
         <li class="title">회원가입</li>

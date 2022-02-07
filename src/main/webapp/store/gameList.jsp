@@ -13,7 +13,7 @@
 <body>
   <div id="container">
     <a name="top"></a>
-    <%@ include file="header.jsp" %>
+    <%@ include file="/header.jsp" %>
     <main>
       <ul class="section_name">
         <li class="title">GAME</li>
