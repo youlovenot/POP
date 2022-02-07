@@ -3,12 +3,12 @@
 <html lang="ko">
 <head>
   <title>pop games</title>
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/index.js"></script>
-  <link rel="shortcut icon" type="image⁄x-icon" href="../img/favicon.ico">
+  <script src="/js/jquery-3.2.1.min.js"></script>
+  <script src="/js/index.js"></script>
+  <link rel="shortcut icon" type="image⁄x-icon" href="/img/favicon.ico">
   <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
-  <link href="../css/common.css" rel="stylesheet" type="text/css">
-  <link href="../css/find_id.css" rel="stylesheet" type="text/css">
+  <link href="/css/common.css" rel="stylesheet" type="text/css">
+  <link href="/css/find_id.css" rel="stylesheet" type="text/css">
   <script> 
     $(document).ready(function(){
       var height = $(".header_bottom").height();
@@ -35,7 +35,7 @@
   
   <div id="container">
     <a name="top"></a>
-    <%@ include file="header.jsp" %>
+    <%@ include file="/header.jsp" %>
     <main class="main">
       <ul class="section_name">
         <li class="title">ID/PW 찾기</li>
@@ -65,7 +65,7 @@
                 </button>
             </div>
             <ul class="find_wrap" id="find_wrap">
-                <li class="go_login"><a target="_blank" href="login.jsp" class="go_login">로그인 하러가기</a>
+                <li class="go_login"><a target="_blank" href="/login.do" class="go_login">로그인 하러가기</a>
                 </li>
     
             </ul>

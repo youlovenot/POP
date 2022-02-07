@@ -44,7 +44,7 @@
 <div id="wrapper">
     <!-- content-->
     <div id="content">
-	    <form action="login.do" method="post">
+	    <form action="/login.do" method="post">
 	        <!-- ID -->
 	        <div>
 	            <h3 class="join_title">

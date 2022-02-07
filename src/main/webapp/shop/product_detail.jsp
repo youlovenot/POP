@@ -3,17 +3,16 @@
 <html lang="ko">
 <head>
   <title>pop games</title>
-  <script src="../js/jquery-3.2.1.min.js"></script>
-  <script src="../js/index.js"></script>
-  <link rel="shortcut icon" type="image⁄x-icon" href="../img/favicon.ico">
-  <link href="../css/common.css" rel="stylesheet" type="text/css">
-  <link href="../css/main.css" rel="stylesheet" type="text/css">
+  <script src="/js/jquery-3.2.1.min.js"></script>
+  <script src="/js/index.js"></script>
+  <link rel="shortcut icon" type="image⁄x-icon" href="/img/favicon.ico">
+  <link href="/css/common.css" rel="stylesheet" type="text/css">
+  <link href="/css/main.css" rel="stylesheet" type="text/css">
   
 </head>
 <body>
   <div id="container">
-    <a name="top"></a>
-    <%@ include file="header.jsp" %>
+    <%@ include file="/header.jsp" %>
     <main>
       <div id="content">
         	<section id="right">
@@ -21,7 +20,7 @@
                     <h3><span>product_detail</span> - goods</h3>
                     <section id="summary1">
                         <div class="image">
-                            <img src="../img/goods/goods1.png">
+                            <img src="/img/goods/goods1.png">
                         </div>
                     </section>
                     <section id="summary2">
@@ -62,8 +61,8 @@
                             </ul>
                         </div>
                         <ul class="buttons">
-                            <li><a href="cart.jsp"><img src="../img/cart.png"></a></li>
-                            <li><a href="order.jsp"><img src="../img/order.png"></a></li>
+                            <li><a href="/order/cart.jsp"><img src="/img/cart.png"></a></li>
+                            <li><a href="/order/order.jsp"><img src="/img/order.png"></a></li>
                         </ul>
                     </section>
                     <div class="clear"></div>
@@ -71,11 +70,11 @@
                 <section id="explanation">
                     <h3>상품 설명</h3>
                     <div class="detail">
-                        <img src="../img/goods/goods_ex1.png">
-                        <img src="../img/goods/goods_ex2.png">
-                        <img src="../img/goods/goods_ex3.png">
-                        <img src="../img/goods/goods_ex4.png">
-                        <img src="../img/goods/goods_ex5.png">
+                        <img src="/img/goods/goods_ex1.png">
+                        <img src="/img/goods/goods_ex2.png">
+                        <img src="/img/goods/goods_ex3.png">
+                        <img src="/img/goods/goods_ex4.png">
+                        <img src="/img/goods/goods_ex5.png">
                     </div>
                 </section>
                 <section id="required">
@@ -98,7 +97,7 @@
         </div> 
     </main>
     <div class="clear"></div>
-    <%@ include file="footer.jsp" %>
+    <%@ include file="/footer.jsp" %>
   </div>
 </body>
 </html>

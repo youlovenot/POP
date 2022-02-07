@@ -59,7 +59,6 @@
   } 
   </script>
   <div id="container">
-    <a name="top"></a>
     <%@ include file="/header.jsp" %>
     <main>
       <div class="banner">

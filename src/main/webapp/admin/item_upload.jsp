@@ -3,10 +3,10 @@
 <html lang="ko">
 <head>
   <title>pop games</title>
-  <link rel="shortcut icon" type="image⁄x-icon" href="../img/favicon.ico">
-   <link href="../css/header.css" rel="stylesheet" type="text/css">
-  <link href="../css/common.css" rel="stylesheet" type="text/css">
-  <link href="../css/admin.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" type="image⁄x-icon" href="/img/favicon.ico">
+   <link href="/css/header.css" rel="stylesheet" type="text/css">
+  <link href="/css/common.css" rel="stylesheet" type="text/css">
+  <link href="/css/admin.css" rel="stylesheet" type="text/css">
 <style>
 .section{margin: 80px 0 30px 0;text-align: center;}
 .inputArea { margin:10px 0; }
@@ -28,18 +28,17 @@ div#container_box { float:right; width:calc(100% - 200px - 20px); }
 </head>
 <body>
   <div id="container">
-      <a name="top"></a>
     <header>
       <div id="header">
         <div id="header_top">
-          <div id="main_logo"><a href="../index.jsp"><img src="../img/main_logo2.png"></a></div>
+          <div id="main_logo"><a href="/index.jsp"><img src="/img/main_logo2.png"></a></div>
         <ul id="top_menu">
           <li><a href="#">로그아웃</a></li>
-          <li><a href="admin.jsp">회원관리</a></li>
-          <li><a href="item_upload.jsp">상품등록</a></li>
-          <li><a href="admin.jsp">상품조회</a></li>
-          <li><a href="item_upload.jsp">게임등록</a></li>
-          <li><a href="admin.jsp">게임조회</a></li>
+          <li><a href="/admin/admin.jsp">회원관리</a></li>
+          <li><a href="/admin/item_upload.jsp">상품등록</a></li>
+          <li><a href="/admin/admin.jsp">상품조회</a></li>
+          <li><a href="/admin/item_upload.jsp">게임등록</a></li>
+          <li><a href="/admin/admin.jsp">게임조회</a></li>
         </ul>
         </div>
       </div>
@@ -97,6 +96,6 @@ div#container_box { float:right; width:calc(100% - 200px - 20px); }
       </section>
     </main>
     <div class="clear"></div>
-    <%@ include file="footer.jsp" %>
+    <%@ include file="/footer.jsp" %>
 </body>
 </html>

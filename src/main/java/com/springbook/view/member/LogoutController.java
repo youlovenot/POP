@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class LogoutController {
 
-	@RequestMapping("*/logout.do")
+	@RequestMapping("/logout.do")
 	public String logout(HttpSession session, HttpServletRequest request) {
 		session.invalidate();
 		String Cpath = request.getHeader("Referer");

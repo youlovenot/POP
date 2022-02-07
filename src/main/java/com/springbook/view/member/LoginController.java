@@ -18,7 +18,7 @@ import com.springbook.biz.member.impl.MemberDAO;
 @Controller
 public class LoginController {
 	
-	@RequestMapping(value="*/login.do", method=RequestMethod.GET)
+	@RequestMapping(value="/login.do", method=RequestMethod.GET)
 	public String loginView(@ModelAttribute("member") MemberVO vo, HttpServletRequest request, HttpSession session) {
 		String referer = request.getHeader("Referer");
 		System.out.println("로그인 화면으로 이동");
@@ -34,7 +34,7 @@ public class LoginController {
 		return "redirect:/member/login.jsp";
 	}
 	
-	@RequestMapping(value="*/login.do", method=RequestMethod.POST)
+	@RequestMapping(value="/login.do", method=RequestMethod.POST)
 	public String login(MemberVO vo, MemberDAO memberDAO, HttpServletResponse response, HttpSession session) throws IOException {
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
