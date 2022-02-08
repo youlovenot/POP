@@ -1,0 +1,21 @@
+table, th, tr, td
+{
+	border : solid 1px black;
+	border-collapse: collapse;
+	padding: 10px;
+	margin-left:400px;
+	text-align: center;
+}
+h1
+{
+	text-align: center;
+}
+.text
+{
+	width : 800px;
+	height : 50px;
+}
+form #notice
+{
+	float:right;
+}
