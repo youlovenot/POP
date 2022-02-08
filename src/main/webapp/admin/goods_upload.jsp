@@ -10,6 +10,8 @@
 <style>
 .section{margin: 80px 0 30px 0;text-align: center;}
 .inputArea { margin:10px 0; }
+.inputArea ul li{display:inline-block;padding:1px;}
+.inputArea ul li input{margin-bottom:2px; text-align:left;}
 select { width:100px; }
 label { display:inline-block; width:70px; padding:5px; }
 label[for='gdsDes'] { display:block; }
@@ -67,12 +69,18 @@ div#container_box { float:right; width:calc(100% - 200px - 20px); }
           </div>
           
           <div class="inputArea">
-            <label for="gdsDes">상품설명</label>
-            <input type="file" name="detail1"><br>
-            <input type="file" name="detail2"><br>
-            <input type="file" name="detail3"><br>
-            <input type="file" name="detail4"><br>
-            <input type="file" name="detail5">
+            <ul>
+            <li><label for="gdsDes">상품설명</label><li>
+            <li><input type="file" name="detail1"></li><br>
+            <li><label for="gdsDes"></label></li>
+            <li><input type="file" name="detail2"></li><br>
+            <li><label for="gdsDes"></label></li>
+            <li><input type="file" name="detail3"></li><br>
+            <li><label for="gdsDes"></label></li>
+            <li><input type="file" name="detail4"></li><br>
+            <li><label for="gdsDes"></label></li>
+            <li><input type="file" name="detail5"></li>
+            </ul>
           </div>
           
           <div class="inputArea">
