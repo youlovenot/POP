@@ -21,16 +21,8 @@ public class LoginController {
 	@RequestMapping(value="/login.do", method=RequestMethod.GET)
 	public String loginView(@ModelAttribute("member") MemberVO vo, HttpServletRequest request, HttpSession session) {
 		String referer = request.getHeader("Referer");
+		session.setAttribute("redirectURI", referer);
 		System.out.println("로그인 화면으로 이동");
-		int pathidx = referer.lastIndexOf("/");
-		if(referer.substring(pathidx).equals("/index.jsp")) {
-			referer = referer.substring(pathidx);
-			session.setAttribute("redirectURI", referer);
-		} else {
-			pathidx = referer.indexOf("/");
-			referer = referer.substring(pathidx);
-			session.setAttribute("redirectURI", referer);
-		}
 		return "redirect:/member/login.jsp";
 	}
 	

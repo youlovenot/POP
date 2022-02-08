@@ -13,12 +13,10 @@ public class LogoutController {
 	public String logout(HttpSession session, HttpServletRequest request) {
 		session.invalidate();
 		String Cpath = request.getHeader("Referer");
-		int pathidx = Cpath.lastIndexOf("/");
-		if(Cpath.substring(pathidx).equals("/index.jsp")) {
-			Cpath = Cpath.substring(pathidx);
-		} else {
-			pathidx = Cpath.indexOf("/");
-			Cpath = Cpath.substring(pathidx);
+		int fidx = Cpath.indexOf("/",7);
+		int lidx = Cpath.lastIndexOf("/");
+		if(Cpath.substring(fidx, lidx).equals("/admin")) {
+			Cpath = "/index.jsp";
 		}
 		System.out.println("현재 경로 : " + Cpath);
 		return "redirect:"+Cpath;

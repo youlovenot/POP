@@ -8,7 +8,7 @@
   <link rel="shortcut icon" type="image⁄x-icon" href="/img/favicon.ico">
   <link href="/css/common.css" rel="stylesheet" type="text/css">
   <link href="/css/admin.css" rel="stylesheet" type="text/css">
-   <link href=/css/header.css" rel="stylesheet" type="text/css">
+   <link href="/css/header.css" rel="stylesheet" type="text/css">
   
 </head>
 <body>
@@ -18,7 +18,7 @@
         <div id="header_top">
           <div id="main_logo"><a href="/index.jsp"><img src="/img/main_logo2.png"></a></div>
         <ul id="top_menu">
-        <li><a href="#">로그아웃</a></li>
+        <li><a href="/logout.do">로그아웃</a></li>
           <li><a href="/admin/admin.jsp">회원관리</a></li>
           <li><a href="/admin/item_upload.jsp">상품등록</a></li>
           <li><a href="/admin/admin.jsp">상품조회</a></li>

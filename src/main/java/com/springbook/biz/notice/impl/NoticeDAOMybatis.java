@@ -3,7 +3,6 @@ package com.springbook.biz.notice.impl;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
-import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

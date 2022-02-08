@@ -4,7 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <link rel="stylesheet" type="text/css" href="/css/header.css">
 <link href="/css/common.css" rel="stylesheet" type="text/css">
- <script src="js/jquery-3.2.1.min.js"></script>
+ <script src="/js/jquery-3.2.1.min.js"></script>
     <script> 
     $(document).ready(function(){
       var height = $(".header_bottom").height();
@@ -32,8 +32,8 @@
           <div id="main_logo"><a href="/index.jsp"><img src="/img/main_logo2.png"></a></div>
         <ul id="top_menu">
           <li><a href="/games/gameList.jsp">GAME</a></li>
-          <li><a href="/shop/goods.jsp">GOODS SHOP</a></li>
-          <li><a href="/shop/board_game.jsp">BOARD GAME SHOP</a></li>
+          <li><a href="/goodsShop/goods.jsp">GOODS SHOP</a></li>
+          <li><a href="/boardGameShop/board_game.jsp">BOARD GAME SHOP</a></li>
           
         </ul>
           <ul id="join_menu" class="navi">

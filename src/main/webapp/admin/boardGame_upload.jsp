@@ -33,7 +33,7 @@ div#container_box { float:right; width:calc(100% - 200px - 20px); }
         <div id="header_top">
           <div id="main_logo"><a href="/index.jsp"><img src="/img/main_logo2.png"></a></div>
         <ul id="top_menu">
-          <li><a href="#">로그아웃</a></li>
+          <li><a href="/logout.do">로그아웃</a></li>
           <li><a href="/admin/admin.jsp">회원관리</a></li>
           <li><a href="/admin/item_upload.jsp">상품등록</a></li>
           <li><a href="/admin/admin.jsp">상품조회</a></li>
@@ -49,7 +49,7 @@ div#container_box { float:right; width:calc(100% - 200px - 20px); }
           <li class="title_a">상품등록</li>
         </ul>
         <div id="container_box">        
-          <form role="form" method="post" autocomplete="off" enctype="multipart/form-data">
+          <form role="form" method="post" action="/insertGoods.do" autocomplete="off" enctype="multipart/form-data">
           
           <div class="inputArea">
             <label for="gdsName">상품명</label>

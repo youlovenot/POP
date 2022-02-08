@@ -25,19 +25,32 @@ select * from member;
 create table notice(
 	seq int primary key,
     title varchar(20) not null,
-    content varchar(1000) not null,
+    content text,
     regdate datetime default CURRENT_TIMESTAMP,
     cnt int default 0
 	);
     
 select * from notice order by seq desc;
 
-delete from notice where seq=20;
-
 insert into notice(seq, title, content)
 values(1, '제목1','내용1');
 
-create table product(
+create table goods(
+	seq int(4) primary key,   /*상품번호*/
+    name varchar(100),		  /*상품이름*/
+    price int(10),			  /*상품가격*/
+    stock int(3),			  /*상품재고*/
+	detail1 varchar(100),	  		  /*상품설명*/
+	detail2 varchar(100),	  		  /*상품설명*/
+	detail3 varchar(100),	  		  /*상품설명*/
+	detail4 varchar(100),	  		  /*상품설명*/
+	detail5 varchar(100),	  		  /*상품설명*/
+    pimage varchar(100),     /*상품이미지*/
+    regDate datetime default CURRENT_TIMESTAMP	 /*상품등록날짜*/
+);
+
+
+create table boardgame(
 	pId int(4) primary key,   /*상품번호*/
     pName varchar(100),		  /*상품이름*/
     pPrice int(10),			  /*상품가격*/
@@ -46,10 +59,7 @@ create table product(
     pImage varchar(4000),     /*상품이미지*/
     pDate datetime default CURRENT_TIMESTAMP	 /*상품등록날짜*/
 );
-insert into product(pId,pName,pPrice,pStock,pDetail,pImage)
-values(1000,'상품이름',10000,10,'상품설명입니다.','상품이미지입니다.');
 
-select * from product;
 
 create table cart(
 	cId int(10) primary key,	/*장바구니 번호*/
