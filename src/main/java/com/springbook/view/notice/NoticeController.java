@@ -22,7 +22,7 @@ public class NoticeController {
 	@Autowired
 	private NoticeService noticeService;
 	// 글 등록
-	@RequestMapping("/test/insertNotice.do")
+	@RequestMapping("/insertNotice.do")
 	public String insertNotice(NoticeVO vo) throws IOException {
 		// 파일 업로드 처리
 		MultipartFile uploadFile = vo.getUploadFile();

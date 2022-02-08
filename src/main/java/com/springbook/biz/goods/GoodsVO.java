@@ -11,11 +11,7 @@ public class GoodsVO {
 	private String name;
 	private int price;
 	private int stock;
-	private String detail1;
-	private String detail2;
-	private String detail3;
-	private String detail4;
-	private String detail5;
+	private String[] details;
 	private String pimage;
 	private Date regDate;
 	private MultipartFile uploadFile;
@@ -53,44 +49,12 @@ public class GoodsVO {
 		this.stock = stock;
 	}
 
-	public String getDetail1() {
-		return detail1;
+	public String[] getDetails() {
+		return details;
 	}
 
-	public void setDetail1(String detail1) {
-		this.detail1 = detail1;
-	}
-
-	public String getDetail2() {
-		return detail2;
-	}
-
-	public void setDetail2(String detail2) {
-		this.detail2 = detail2;
-	}
-
-	public String getDetail3() {
-		return detail3;
-	}
-
-	public void setDetail3(String detail3) {
-		this.detail3 = detail3;
-	}
-
-	public String getDetail4() {
-		return detail4;
-	}
-
-	public void setDetail4(String detail4) {
-		this.detail4 = detail4;
-	}
-
-	public String getDetail5() {
-		return detail5;
-	}
-
-	public void setDetail5(String detail5) {
-		this.detail5 = detail5;
+	public void setDetails(String[] details) {
+		this.details = details;
 	}
 
 	public String getPimage() {
@@ -120,8 +84,8 @@ public class GoodsVO {
 	@Override
 	public String toString() {
 		return "NoticeVO [seq=" + seq + ", name=" + name + ", price=" + price
-				 + ", stock=" + stock + ", detail1=" + detail1 + ", detail2=" + detail2 
-				 + ", detail3=" + detail3 + ", detail4=" + detail4 + ", detail5=" + detail5 
+				 + ", stock=" + stock + ", detail1=" + details[1] + ", detail2=" + details[2] 
+				 + ", detail3=" + details[3] + ", detail4=" + details[4] + ", detail5=" + details[5] 
 				 + ", pimage=" + pimage + ", regDate=" + regDate + "]";
 	}
 
