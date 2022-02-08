@@ -16,7 +16,7 @@
       var move = 0;
       function noticeRolling(){
         move += height;
-        $(".ul").animate({"top":-move},1000,function(){
+        $(".ul").animate({"top"-move},1000,function(){
           if(move >= max){
             $(this).css("top",0);
             move = 0;

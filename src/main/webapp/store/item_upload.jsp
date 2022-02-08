@@ -53,8 +53,12 @@ div#container_box { float:right; width:calc(100% - 200px - 20px); }
           <form role="form" method="post" autocomplete="off" enctype="multipart/form-data">
           
           <div class="inputArea">
-            <label for="gdsName">상품명</label>
-            <input type="text" id="gdsName" name="gdsName" />
+            <ul>
+            
+            <li><label for="gdsName">상품명</label></li>
+            <li><input type="text" id="gdsName" name="gdsName" /></li>
+            
+            </ul>
           </div>
           
           <div class="inputArea">
