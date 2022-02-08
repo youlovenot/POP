@@ -5,10 +5,12 @@
 	<!-- Alias 설정 -->
 	<typeAliases>
 		<typeAlias alias="notice" type="com.springbook.biz.notice.NoticeVO" />
+		<typeAlias alias="goods" type="com.springbook.biz.goods.GoodsVO" />
 	</typeAliases>
 	
 	<!-- Sql Mapper 설정 -->
 	<mappers>
 		<mapper resource="mappings/notice-mapping.xml" />
+		<mapper resource="mappings/goods-mapping.xml" />
 	</mappers>
 </configuration>

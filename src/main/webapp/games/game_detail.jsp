@@ -3,17 +3,16 @@
 <html lang="ko">
 <head>
   <title>pop games</title>
-  <script src="../js/jquery-3.2.1.min.js"></script>
-  <script src="../js/index.js"></script>
-  <link rel="shortcut icon" type="image⁄x-icon" href="../img/favicon.ico">
-  <link href="../css/common.css" rel="stylesheet" type="text/css">
-  <link href="../css/goods.css" rel="stylesheet" type="text/css">
+  <script src="/js/jquery-3.2.1.min.js"></script>
+  <script src="/js/index.js"></script>
+  <link rel="shortcut icon" type="image⁄x-icon" href="/img/favicon.ico">
+  <link href="/css/common.css" rel="stylesheet" type="text/css">
+  <link href="/css/goods.css" rel="stylesheet" type="text/css">
   
 </head>
 <body>
   <div id="container">
-    <a name="top"></a>
-    <%@ include file="header.jsp" %>
+    <%@ include file="/header.jsp" %>
     <main>
        <div id="content">
         	<section id="right">
@@ -21,7 +20,7 @@
                     <h3><span>Game</span></h3>
                     <section id="summary1">
                         <div class="image">
-                            <img src="../img/flashgame/루미큐브.jfif">
+                            <img src="/img/flashgame/루미큐브.jfif">
                         </div>
                     </section>
                     <section id="summary2">
@@ -46,7 +45,7 @@
                             </ul>
                         </div>
                         <ul class="buttons">
-                            <li><a href="#"><img src="../img/flashgame/start.png"></a></li>
+                            <li><a href="#"><img src="/img/flashgame/start.png"></a></li>
                         </ul>
                     </section>
                     <div class="clear"></div>
@@ -54,12 +53,12 @@
                 <section id="explanation">
                     <h3>상품 설명</h3>
                     <div class="detail">
-                        <img src="../img/flashgame/ex1.jpg">
-                        <img src="../img/flashgame/ex2.jfif">
-                        <img src="../img/flashgame/ex3.jfif">
-                        <img src="../img/flashgame/ex4.png">
-                        <img src="../img/flashgame/ex5.png">
-                        <img src="../img/flashgame/ex6.png">
+                        <img src="/img/flashgame/ex1.jpg">
+                        <img src="/img/flashgame/ex2.jfif">
+                        <img src="/img/flashgame/ex3.jfif">
+                        <img src="/img/flashgame/ex4.png">
+                        <img src="/img/flashgame/ex5.png">
+                        <img src="/img/flashgame/ex6.png">
                     </div>
                 </section>
             </section>
@@ -67,7 +66,7 @@
         </div> 
     </main>
     <div class="clear"></div>
-    <%@ include file="footer.jsp" %>
+    <%@ include file="/footer.jsp" %>
   </div>
 </body>
 </html>

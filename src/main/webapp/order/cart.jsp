@@ -3,17 +3,16 @@
 <html lang="ko">
 <head>
   <title>pop games</title>
-  <script src="../js/jquery-3.2.1.min.js"></script>
-  <script src="../js/index.js"></script>
-  <link rel="shortcut icon" type="image⁄x-icon" href="../img/favicon.ico">
-  <link href="../css/common.css" rel="stylesheet" type="text/css">
-  <link href="../css/cart.css" rel="stylesheet" type="text/css">
+  <script src="/js/jquery-3.2.1.min.js"></script>
+  <script src="/js/index.js"></script>
+  <link rel="shortcut icon" type="image⁄x-icon" href="/img/favicon.ico">
+  <link href="/css/common.css" rel="stylesheet" type="text/css">
+  <link href="/css/cart.css" rel="stylesheet" type="text/css">
   
 </head>
 <body>
   <div id="container">
-    <a name="top"></a>
-    <%@ include file="header.jsp" %>
+    <%@ include file="/header.jsp" %>
     <main>
          <div id="content">
         	<section id="right">
@@ -34,10 +33,10 @@
                     <tr class="items">
                         <td class="col1"><input type="checkbox"></td>
                         <td class="col2" id="left">
-                            <img src="../img/goods/goods1.png">
+                            <img src="/img/goods/goods1.png">
                             
                         </td>
-                        <td class="coladd"><div">팝콘 키홀더</div></td>
+                        <td class="coladd"><div>팝콘 키홀더</div></td>
                         <td class="col3">8,900원</td>
                         <td class="col4">
                             1개
@@ -49,9 +48,9 @@
                     <tr class="items">
                         <td class="col1"><input type="checkbox"></td>
                         <td class="col2" id="left">
-                            <img src="../img/goods/goods2.png">
+                            <img src="/img/goods/goods2.png">
                         </td>
-                        <td class="coladd"><div">팝콘 마스크 스트랩</div></td>
+                        <td class="coladd"><div>팝콘 마스크 스트랩</div></td>
                         <td class="col3">9,900원</td>
                         <td class="col4">
                             1개
@@ -87,17 +86,17 @@
                     </tr>
                 </table>
                 <ul id="order_buttons">
-                    <li><a href="../index.jsp"><img src="../img/shopping.png"></a></li>
-                    <li><a href="order.jsp"><img src="../img/select_order.png"></a></li>
-                    <li><a href="order.jsp"><img src="../img/all_order.png"></a></li>
+                    <li><a href="/index.jsp"><img src="/img/shopping.png"></a></li>
+                    <li><a href="/order/order.jsp"><img src="/img/select_order.png"></a></li>
+                    <li><a href="/order/order.jsp"><img src="/img/all_order.png"></a></li>
                 </ul>
         </section>
             <div class="clear"></div> 
         </div> 
-        <div class="footer_banner"><img src="../img/footer_banner1.png"></div>
+        <div class="footer_banner"><img src="/img/footer_banner1.png"></div>
     </main>
     <div class="clear"></div>
-    <%@ include file="footer.jsp" %>
+    <%@ include file="/footer.jsp" %>
   </div>
 </body>
 </html>
