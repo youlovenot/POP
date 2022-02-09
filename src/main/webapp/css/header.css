@@ -37,13 +37,15 @@
 }
 header {
   width: 100%;
+ 
 }
 #header {
   height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
- /* border-bottom: #ccc 1px solid;*/
+  margin-bottom:10px;
+
 }
 #header #header_top #main_logo {
 
@@ -74,6 +76,7 @@ header {
 .header_bottom{
   background-color:rgb(243, 239, 239);
   border: rgb(228, 226, 226) 1px solid;
+
   position: relative;
   width: 100%;
   font-size: 15px;
