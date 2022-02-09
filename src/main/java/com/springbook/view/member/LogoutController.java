@@ -9,16 +9,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class LogoutController {
 
-	@RequestMapping("/logout.do")
+	@RequestMapping("/logout.com")
 	public String logout(HttpSession session, HttpServletRequest request) {
 		session.invalidate();
 		String Cpath = request.getHeader("Referer");
 		int fidx = Cpath.indexOf("/",7);
+		Cpath = Cpath.substring(fidx);
 		int lidx = Cpath.lastIndexOf("/");
-		if(Cpath.substring(fidx, lidx).equals("/admin")) {
-			Cpath = "/index.jsp";
+		if(Cpath.substring(0,lidx).equals("/admin")) {
+			Cpath = "/";
 		}
-		return "redirect:"+Cpath;
+		return "redirect:" + Cpath;
 	}
 	
 }
