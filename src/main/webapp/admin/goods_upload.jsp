@@ -8,28 +8,22 @@
   <link href="/css/common.css" rel="stylesheet" type="text/css">
   <link href="/css/admin.css" rel="stylesheet" type="text/css">
 <style>
-.section{margin: 80px 0 30px 0;text-align: center;}
-.inputArea { margin:10px 0; }
-.inputArea ul li{display:inline-block;padding:1px;}
-.inputArea ul li input{margin-bottom:2px; text-align:left;}
-select { width:100px; }
-label { display:inline-block; width:70px; padding:5px; }
-label[for='gdsDes'] { display:block; }
-input { width:200px; }
-textarea#gdsDes { width:400px; height:180px; }
-.select_img img { margin:20px 0; }
-section#container { 
-  margin-top: 10px;
-  padding:0 250px; border-top:2px solid #eee; border-bottom:2px solid #eee; }
-section#container::after { content:""; display:block; clear:both; }
-aside { float:left; width:200px; }
-div#container_box { float:right; width:calc(100% - 200px - 20px); }
-.inputArea button{padding: 5px;}
+      .inputArea { margin:20px 0; }
+      label { display:inline-block; width:70px; padding:5px; }
+      table .inputArea input{margin-bottom: 7px;}
+      input { width:200px; }
+    
+      section#container { 
+        padding:0 270px; border-top:2px solid #eee; border-bottom:2px solid #eee; }
+      section#container::after { content:""; display:block; clear:both; }
+      aside { float:left; width:200px; }
+      div#container_box { float:right; width:calc(100% - 200px - 20px); }
+      .inputArea button{padding: 5px;margin-top: 25px; margin-bottom: 30px;}
 </style>
   
 </head>
 <body>
-  <div id="container">
+  <div class="container">
     <header>
       <div id="header">
         <div id="header_top">
@@ -51,22 +45,47 @@ div#container_box { float:right; width:calc(100% - 200px - 20px); }
         </ul>
         <div id="container_box">        
           <form role="form" method="post" action="/insertGoods.do" autocomplete="off" enctype="multipart/form-data">
+          <table> 
+          <tr class="inputArea">
+            <td><label for="gdsName">상품명</label></td>
+            <td><input type="text" id="gdsName" name="name" /></td>
+          </tr>
+          <tr class="inputArea">
+            <td><label for="gdsPrice">상품가격</label></td>
+            <td><input type="text" id="gdsPrice" name="price" /></td>
+          </tr>
           
-          <div class="inputArea">
-            <label for="gdsName">상품명</label>
-            <input type="text" id="gdsName" name="name" />
-          </div>
+          <tr class="inputArea">
+            <td><label for="gdsStock">상품재고</label></td>
+            <td><input type="text" id="gdsStock" name="stock" /></td>
+          </tr>
           
-          <div class="inputArea">
-            <label for="gdsPrice">상품가격</label>
-            <input type="text" id="gdsPrice" name="price" />
-          </div>
+<<<<<<< HEAD
+          <tr class="inputArea">
+            <td><label for="gdsDes">상품설명</label></td>
+            <td><input type="file" name="detail1"></td>
+          </tr>
+          <tr class="inputArea">
+            <td><label for="gdsDes"></label></td>
+            <td><input type="file" name="detail2"></td>
+          </tr>
+          <tr class="inputArea">
+            <td><label for="gdsDes"></label></td>
+            <td><input type="file" name="detail3"></td>
+          </tr>
+          <tr class="inputArea">
+            <td><label for="gdsDes"></label></td>
+            <td><input type="file" name="detail4"></td>
+          </tr>
+          <tr class="inputArea">
+            <td><label for="gdsDes"></label></td>
+            <td><input type="file" name="detail5"></td>
+          </tr>
           
-          <div class="inputArea">
-            <label for="gdsStock">상품재고</label>
-            <input type="text" id="gdsStock" name="stock" />
-          </div>
-          
+          <tr class="inputArea">
+            <td><label for="gdsImg">이미지</label></td>
+            <td><input type="file" id="gdsImg" name="pimage" /></td>
+=======
           <div class="inputArea">
             <ul>
             <li><label for="gdsDes">상품설명</label><li>
@@ -85,8 +104,10 @@ div#container_box { float:right; width:calc(100% - 200px - 20px); }
           <div class="inputArea">
             <label for="gdsImg">이미지</label>
             <input type="file" id="gdsImg" name="imgupload" />
+>>>>>>> 03d78ab589da039111a97a617368967119ce4c6d
             <div class="select_img"><img src="" /></div>
-            
+          
+         
             <script>
               $("#gdsImg").change(function(){
                 if(this.files && this.files[0]) {
@@ -97,13 +118,15 @@ div#container_box { float:right; width:calc(100% - 200px - 20px); }
                   reader.readAsDataURL(this.files[0]);
                 }
               });
-            </script> 
-          </div>
-          <div class="inputArea">
-            <button type="submit" id="register_Btn" class="btn btn-primary">등록</button>			
-          </div> 
+            </script>
+            </div>
+          <tr class="inputArea">
+            <td></td>
+            <td><button type="submit" id="register_Btn" class="btn btn-primary">등록</button></td>			
+          </tr>
+           </table>
           </form> 
-        </div>
+          </div>
       </section>
     </main>
     <div class="clear"></div>

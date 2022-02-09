@@ -64,7 +64,8 @@ create table boardgame(
 create table cart(
 	cId int(10) primary key,	/*장바구니 번호*/
     id varchar(20) references member(id),   /*회원 아이디*/
-    pId int(4) references product(pId),     /*상품번호*/
+    seq int(4) references goods(seq)
+    pId int(4) references boardgame(pId),     /*상품번호*/
     cQty int(3) default 1				    /*수량*/
 );
 
