@@ -60,7 +60,6 @@
             <td><input type="text" id="gdsStock" name="stock" /></td>
           </tr>
           
-<<<<<<< HEAD
           <tr class="inputArea">
             <td><label for="gdsDes">상품설명</label></td>
             <td><input type="file" name="detail1"></td>
@@ -85,41 +84,8 @@
           <tr class="inputArea">
             <td><label for="gdsImg">이미지</label></td>
             <td><input type="file" id="gdsImg" name="pimage" /></td>
-=======
-          <div class="inputArea">
-            <ul>
-            <li><label for="gdsDes">상품설명</label><li>
-            <li><input type="file" name="d1upload"></li><br>
-            <li><label for="gdsDes"></label></li>
-            <li><input type="file" name="d2upload"></li><br>
-            <li><label for="gdsDes"></label></li>
-            <li><input type="file" name="d3upload"></li><br>
-            <li><label for="gdsDes"></label></li>
-            <li><input type="file" name="d4upload"></li><br>
-            <li><label for="gdsDes"></label></li>
-            <li><input type="file" name="d5upload"></li><br>
-            </ul>
-          </div>
-          
-          <div class="inputArea">
-            <label for="gdsImg">이미지</label>
-            <input type="file" id="gdsImg" name="imgupload" />
->>>>>>> 03d78ab589da039111a97a617368967119ce4c6d
-            <div class="select_img"><img src="" /></div>
-          
-         
-            <script>
-              $("#gdsImg").change(function(){
-                if(this.files && this.files[0]) {
-                  var reader = new FileReader;
-                  reader.onload = function(data) {
-                    $(".select_img img").attr("src", data.target.result).width(500);								
-                  }
-                  reader.readAsDataURL(this.files[0]);
-                }
-              });
-            </script>
-            </div>
+          </tr>
+      
           <tr class="inputArea">
             <td></td>
             <td><button type="submit" id="register_Btn" class="btn btn-primary">등록</button></td>			
