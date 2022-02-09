@@ -44,8 +44,8 @@
 <div id="wrapper">
     <!-- content-->
     <div id="content">
-	    <form action="/login.do" method="post">
-	    <p> ${member.alert } </p>
+	    <form action="/login.com" method="post">
+	    <p id="alert"> ${alert } </p>
 	        <!-- ID -->
 	        <div>
 	            <h3 class="join_title">

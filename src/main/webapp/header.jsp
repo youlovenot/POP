@@ -29,7 +29,7 @@
 <header>
       <div id="header">
         <div id="header_top">
-          <div id="main_logo"><a href="/index.jsp"><img src="/img/main_logo2.png"></a></div>
+          <div id="main_logo"><a href="/"><img src="/img/main_logo2.png"></a></div>
         <ul id="top_menu">
           <li><a href="/games/gameList.jsp">GAME</a></li>
           <li><a href="/goodsShop/goods.jsp">GOODS SHOP</a></li>
@@ -38,12 +38,12 @@
         </ul>
           <ul id="join_menu" class="navi">
           <c:if test="${empty memberId  }">    <!-- 로그인 X -->
-            <li><a href="/login.do">로그인</a></li>
+            <li><a href="/login.com">로그인</a></li>
             <li><a href="/order/cart.jsp">장바구니</a></li>
             <li><a href="#">구매내역</a></li>
            </c:if>
            <c:if test="${not empty memberId  }">
-           	<li><a href="/logout.do">로그아웃</a></li>
+           	<li><a href="/logout.com">로그아웃</a></li>
 	           <c:if test="${memberId eq 'admin' }">
 	           		<li><a href="/admin/mem_admin.jsp">관리자페이지</a></li>
 	           </c:if>
