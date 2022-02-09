@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="MemberDAO">
+
+	<resultMap id="memberResult" type="member">
+		<id property="id" column="ID"/>
+		<result property="password" column="PASSWORD"/>
+		<result property="name" column="NAME"/>
+		<result property="phone" column="PHONE"/>
+		<result property="email" column="EMAIL"/>
+		<result property="zipcode" column="ZIPCODE"/>
+		<result property="adress1" column="ADRESS1"/>
+		<result property="adress2" column="ADRESS2"/>
+	</resultMap>
+
+	<select id="getMemberList" resultMap="memberResult">
+		select * from member
+		where
+		<if test="searchMCondition == 'ID'">
+			id like CONCAT('%',#{searchMKeyword},'%')
+		</if>
+		<if test="searchMCondition == 'NAME'">
+			name like CONCAT('%',#{searchMKeyword},'%')
+		</if>
+		order by id asc
+	</select>
+</mapper>

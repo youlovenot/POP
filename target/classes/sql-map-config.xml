@@ -4,13 +4,15 @@
 <configuration>
 	<!-- Alias 설정 -->
 	<typeAliases>
-		<typeAlias alias="notice" type="com.springbook.biz.notice.NoticeVO" />
+		<typeAlias alias="member" type="com.springbook.biz.member.MemberVO" />
 		<typeAlias alias="goods" type="com.springbook.biz.goods.GoodsVO" />
+		<typeAlias alias="notice" type="com.springbook.biz.notice.NoticeVO" />
 	</typeAliases>
 	
 	<!-- Sql Mapper 설정 -->
 	<mappers>
-		<mapper resource="mappings/notice-mapping.xml" />
+		<mapper resource="mappings/member-mapping.xml" />
 		<mapper resource="mappings/goods-mapping.xml" />
+		<mapper resource="mappings/notice-mapping.xml" />
 	</mappers>
 </configuration>

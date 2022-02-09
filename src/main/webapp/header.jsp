@@ -32,7 +32,7 @@
           <div id="main_logo"><a href="/"><img src="/img/main_logo2.png"></a></div>
         <ul id="top_menu">
           <li><a href="/games/gameList.jsp">GAME</a></li>
-          <li><a href="/goodsShop/goods.jsp">GOODS SHOP</a></li>
+          <li><a href="/goods.com">GOODS SHOP</a></li>
           <li><a href="/boardGameShop/board_game.jsp">BOARD GAME SHOP</a></li>
         </ul>
         
@@ -45,7 +45,7 @@
            <c:if test="${not empty memberId  }">  <!-- 관리자로 로그인 했을때 -->
            	<li><a href="/logout.com">로그아웃</a></li>
 	           <c:if test="${memberId eq 'admin' }">
-	           		<li><a href="/admin/mem_admin.jsp">관리자페이지</a></li>
+	           		<li><a href="/admin/member.com">관리자페이지</a></li>
 	           </c:if>
 	           <c:if test="${memberId ne 'admin' }">  <!-- 사용자가 로그인 했을때 -->
 		            <li><a href="/order/cart.jsp">장바구니</a></li>

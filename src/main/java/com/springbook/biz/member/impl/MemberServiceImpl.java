@@ -1,5 +1,7 @@
 package com.springbook.biz.member.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,5 +19,9 @@ public class MemberServiceImpl implements MemberService {
 	
 	public MemberVO getMember(MemberVO vo) {
 		return memberDAO.getMember(vo);
+	}
+
+	public List<MemberVO> getMemberList(MemberVO vo) {
+		return memberDAO.getMemberList(vo);
 	}
 }

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 <html lang="ko">
 <head>
   <title>pop games</title>
@@ -9,18 +10,17 @@
   <link href="/css/common.css" rel="stylesheet" type="text/css">
   <link href="/css/admin.css" rel="stylesheet" type="text/css">
    <link href="/css/header.css" rel="stylesheet" type="text/css">
-  
 </head>
 <body>
   <div id="container">
      <header>
       <div id="header">
         <div id="header_top">
-          <div id="main_logo"><a href="/index.jsp"><img src="/img/main_logo2.png"></a></div>
+          <div id="main_logo"><a href="/"><img src="/img/main_logo2.png"></a></div>
         <ul id="top_menu">
         <li><a href="/logout.com">로그아웃</a></li>
-          <li><a href="/admin/mem_admin.jsp">회원관리</a></li>
-          <li><a href="/admin/goods_admin.jsp">굿즈</a></li>
+          <li><a href="/admin/member.com">회원관리</a></li>
+          <li><a href="/admin/goods.com">굿즈</a></li>
           <li><a href="/admin/board_admin.jsp">보드게임</a></li>
           <li><a href="/admin/game_admin.jsp">게임</a></li>
         </ul>
@@ -31,19 +31,20 @@
          <ul class="section">
             <li class="title_a">굿즈샵 관리</li>
           </ul>
-          <FORM method="post" name="msgsearch" action="/admin/admin.jsp">
+          <FORM method="post" action="/admin/goods.com">
             <TABLE class="search">
              <TR>
               <TD class="search_select"> 
-               <SELECT name=stype >
-                <OPTION value=1 >상품명
-                <OPTION value=2 >상품번호
+               <SELECT name="searchCondition" >
+				<c:forEach items="${goodsConditionMap }" var="option">
+					<option value="${option.value }">${option.key }
+				</c:forEach>
                </SELECT>
               </TD>
               <TD class="search_select">
-               <INPUT type=text size="17" name="sval" >
+               <INPUT type=text size="17" name="searchKeyword" >
               </TD>
-              <TD class="search_select"><a href="#" onClick="check();"><img src="/img/serach.gif"></A></TD>
+              <TD class="search_select"><input type="image" src="/img/serach.gif"></TD>
              </TR>
             </TABLE>
             </FORM>
@@ -56,14 +57,33 @@
                 <th>재고</th>
                 <th>상품설명</th>
             </tr>
+            
+			<c:forEach items="${goodsList }" var="goods">
             <tr class="tr">
-                <td>12342</td>
-                <td>이쁜그림</td>
-                <td>인형</td>
-                <td>100억</td>
-                <td>1</td>
-                <td>많은그림</td>
+                <td>${goods.seq }</td>
+                <td><img src="${imgpath }${goods.pimage}" width="100px" height="100px" onclick="window.open(this.src,'info','width='+this.naturalWidth+' height='+this.naturalHeight+' menubar=no status=no toolbar=no location=no'); return false;" style="cursor:pointer;"></td>
+                <td>${goods.name }</td>
+                <td>${goods.price }원</td>
+                <td>${goods.stock }</td>
+                <td>
+                	<c:if test="${not empty goods.detail1 }">
+                	<img src="${imgpath}${goods.detail1 }" width="100px" height="100px" class="click_img" style="cursor:pointer" onclick="window.open(this.src,'info','width='+this.naturalWidth+' height='+this.naturalHeight+' menubar=no status=no toolbar=no location=no'); return false;"> 
+                	</c:if>
+                	<c:if test="${not empty goods.detail2 }">
+                	<img src="${imgpath}${goods.detail2 }" width="100px" height="100px" class="click_img" style="cursor:pointer" onclick="window.open(this.src,'info','width='+this.naturalWidth+' height='+this.naturalHeight+' menubar=no status=no toolbar=no location=no'); return false;"> 
+                	</c:if>
+                	<c:if test="${not empty goods.detail3 }">
+                	<img src="${imgpath}${goods.detail3 }" width="100px" height="100px" class="click_img" style="cursor:pointer" onclick="window.open(this.src,'info','width='+this.naturalWidth+' height='+this.naturalHeight+' menubar=no status=no toolbar=no location=no'); return false;">
+                	</c:if>
+                	<c:if test="${not empty goods.detail4 }">
+                	<img src="${imgpath}${goods.detail4 }" width="100px" height="100px" class="click_img" style="cursor:pointer" onclick="window.open(this.src,'info','width='+this.naturalWidth+' height='+this.naturalHeight+' menubar=no status=no toolbar=no location=no'); return false;"> 
+                	</c:if>
+                	<c:if test="${not empty goods.detail5 }">
+                	<img src="${imgpath}${goods.detail5 }" width="100px" height="100px" class="click_img" style="cursor:pointer" onclick="window.open(this.src,'info','width='+this.naturalWidth+' height='+this.naturalHeight+' menubar=no status=no toolbar=no location=no'); return false;">
+                	</c:if></td>
             </tr>
+            </c:forEach>
+            
           <tr><td colspan="6" style="padding-top: 10px; padding-right: 100px; text-align: right">
           <button onclick="location='/admin/goods_upload.jsp'" style="width: 80px; height: 30px">추가</button>
           </td></tr>

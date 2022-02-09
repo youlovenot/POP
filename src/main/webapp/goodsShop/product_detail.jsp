@@ -17,19 +17,19 @@
       <div id="content">
         	<section id="right">
                 <section id="summary">
-                    <h3><span>product_detail</span> - goods</h3>
+                    <h3><span>GOODS</span></h3>
                     <section id="summary1">
                         <div class="image">
-                            <img src="/img/goods/goods1.png">
+                            <img src="${imgpath }${goods.pimage}">
                         </div>
                     </section>
                     <section id="summary2">
-                        <h3>팝콘 키홀더</h3>
+                        <h3>${goods.name }</h3>
                         <div class="item">
                             <ul>
                                 <li>
                                     <div class="col1">판매가</div>
-                                    <div class="col2">8,900원</div>
+                                    <div class="col2">${goods.price }원</div>
                                     <div class="clear"></div>
                                 </li>
                                 <li>
@@ -47,17 +47,6 @@
                                     <div class="col2"><input type="text"></div>
                                     <div class="clear"></div>
                                 </li>
-                                <li>
-                                    <div class="col1">옵션</div>
-                                    <div class="col2">
-                                        <select>
-                                            <option>== 옵션 선택 ==</option>
-                                            <option>색상 - 브라운</option>
-                                            <option>색상 - 옐로우</option>
-                                        </select>
-                                    </div>
-                                    <div class="clear"></div>
-                                </li>
                             </ul>
                         </div>
                         <ul class="buttons">
@@ -70,11 +59,21 @@
                 <section id="explanation">
                     <h3>상품 설명</h3>
                     <div class="detail">
-                        <img src="/img/goods/goods_ex1.png">
-                        <img src="/img/goods/goods_ex2.png">
-                        <img src="/img/goods/goods_ex3.png">
-                        <img src="/img/goods/goods_ex4.png">
-                        <img src="/img/goods/goods_ex5.png">
+                		<c:if test="${not empty goods.detail1 }">
+                        	<img src="${imgpath }${goods.detail1}">
+                        </c:if>
+                		<c:if test="${not empty goods.detail2 }">
+	                        <img src="${imgpath }${goods.detail2}">
+                        </c:if>
+                		<c:if test="${not empty goods.detail3 }">
+	                        <img src="${imgpath }${goods.detail3}">
+                        </c:if>
+                		<c:if test="${not empty goods.detail4 }">
+	                        <img src="${imgpath }${goods.detail4}">
+                        </c:if>
+                		<c:if test="${not empty goods.detail5 }">
+	                        <img src="${imgpath }${goods.detail5}">
+                        </c:if>
                     </div>
                 </section>
                 <section id="required">
