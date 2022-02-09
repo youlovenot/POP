@@ -18,7 +18,12 @@ public class GoodsVO {
 	private String detail5;
 	private String pimage;
 	private Date regDate;
-	private MultipartFile uploadFile;
+	private MultipartFile d1upload;
+	private MultipartFile d2upload;
+	private MultipartFile d3upload;
+	private MultipartFile d4upload;
+	private MultipartFile d5upload;
+	private MultipartFile imgupload;
 	
 	// Getter/Setter 메소드
 	public int getSeq() {
@@ -53,44 +58,12 @@ public class GoodsVO {
 		this.stock = stock;
 	}
 
-	public String getDetail1() {
-		return detail1;
-	}
-
-	public void setDetail1(String detail1) {
-		this.detail1 = detail1;
-	}
-
-	public String getDetail2() {
-		return detail2;
-	}
-
-	public void setDetail2(String detail2) {
-		this.detail2 = detail2;
-	}
-
-	public String getDetail3() {
-		return detail3;
-	}
-
-	public void setDetail3(String detail3) {
-		this.detail3 = detail3;
-	}
-
-	public String getDetail4() {
-		return detail4;
-	}
-
-	public void setDetail4(String detail4) {
-		this.detail4 = detail4;
-	}
-
-	public String getDetail5() {
-		return detail5;
-	}
-
-	public void setDetail5(String detail5) {
-		this.detail5 = detail5;
+	public void setDetails(String[] details) {
+		this.detail1 = details[0];
+		this.detail2 = details[1];
+		this.detail3 = details[2];
+		this.detail4 = details[3];
+		this.detail5 = details[4];
 	}
 
 	public String getPimage() {
@@ -108,13 +81,18 @@ public class GoodsVO {
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
-	
-	public MultipartFile getUploadFile() {
-		return uploadFile;
+
+	public MultipartFile[] getDupload() {
+		MultipartFile[] dUploads = {d1upload, d2upload, d3upload, d4upload, d5upload};
+		return dUploads;
 	}
 
-	public void setUploadFile(MultipartFile uploadFile) {
-		this.uploadFile = uploadFile;
+	public MultipartFile getImgupload() {
+		return imgupload;
+	}
+
+	public void setImgupload(MultipartFile imgupload) {
+		this.imgupload = imgupload;
 	}
 
 	@Override

@@ -30,11 +30,10 @@
           <div id="main_logo"><a href="/index.jsp"><img src="/img/main_logo2.png"></a></div>
         <ul id="top_menu">
           <li><a href="/logout.do">로그아웃</a></li>
-          <li><a href="/admin/admin.jsp">회원관리</a></li>
-          <li><a href="/admin/item_upload.jsp">상품등록</a></li>
-          <li><a href="/admin/admin.jsp">상품조회</a></li>
-          <li><a href="/admin/item_upload.jsp">게임등록</a></li>
-          <li><a href="/admin/admin.jsp">게임조회</a></li>
+          <li><a href="/admin/mem_admin.jsp">회원관리</a></li>
+          <li><a href="/admin/goods_admin.jsp">굿즈</a></li>
+          <li><a href="/admin/board_admin.jsp">보드게임</a></li>
+          <li><a href="/admin/game_admin.jsp">게임</a></li>
         </ul>
         </div>
       </div>
@@ -61,6 +60,7 @@
             <td><input type="text" id="gdsStock" name="stock" /></td>
           </tr>
           
+<<<<<<< HEAD
           <tr class="inputArea">
             <td><label for="gdsDes">상품설명</label></td>
             <td><input type="file" name="detail1"></td>
@@ -85,6 +85,26 @@
           <tr class="inputArea">
             <td><label for="gdsImg">이미지</label></td>
             <td><input type="file" id="gdsImg" name="pimage" /></td>
+=======
+          <div class="inputArea">
+            <ul>
+            <li><label for="gdsDes">상품설명</label><li>
+            <li><input type="file" name="d1upload"></li><br>
+            <li><label for="gdsDes"></label></li>
+            <li><input type="file" name="d2upload"></li><br>
+            <li><label for="gdsDes"></label></li>
+            <li><input type="file" name="d3upload"></li><br>
+            <li><label for="gdsDes"></label></li>
+            <li><input type="file" name="d4upload"></li><br>
+            <li><label for="gdsDes"></label></li>
+            <li><input type="file" name="d5upload"></li><br>
+            </ul>
+          </div>
+          
+          <div class="inputArea">
+            <label for="gdsImg">이미지</label>
+            <input type="file" id="gdsImg" name="imgupload" />
+>>>>>>> 03d78ab589da039111a97a617368967119ce4c6d
             <div class="select_img"><img src="" /></div>
           
          

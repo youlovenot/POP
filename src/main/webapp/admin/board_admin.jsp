@@ -19,18 +19,17 @@
           <div id="main_logo"><a href="/index.jsp"><img src="/img/main_logo2.png"></a></div>
         <ul id="top_menu">
         <li><a href="/logout.do">로그아웃</a></li>
-          <li><a href="/admin/admin.jsp">회원관리</a></li>
-          <li><a href="/admin/item_upload.jsp">상품등록</a></li>
-          <li><a href="/admin/admin.jsp">상품조회</a></li>
-          <li><a href="/admin/item_upload.jsp">게임등록</a></li>
-          <li><a href="/admin/admin.jsp">게임조회</a></li>
+          <li><a href="/admin/mem_admin.jsp">회원관리</a></li>
+          <li><a href="/admin/goods_admin.jsp">굿즈</a></li>
+          <li><a href="/admin/board_admin.jsp">보드게임</a></li>
+          <li><a href="/admin/game_admin.jsp">게임</a></li>
         </ul>
         </div>
       </div>
     </header>
     <main>
          <ul class="section">
-            <li class="title_a">회원관리</li>
+            <li class="title_a">보드게임샵 관리</li>
           </ul>
           <FORM method="post" name="msgsearch" action="/admin/admin.jsp">
             <TABLE class="search">
