@@ -17,19 +17,12 @@ public class GoodsServiceImpl implements GoodsService {
 		goodsDAO.insertGoods(vo);
 	}
 
-	public void updateGoods(GoodsVO vo) {
-		goodsDAO.updateGoods(vo);
-	}
-
-	public void deleteGoods(GoodsVO vo) {
-		goodsDAO.deleteGoods(vo);
+	public List<GoodsVO> getGoodsList(GoodsVO vo) {
+		return goodsDAO.getGoodsList(vo);
 	}
 
 	public GoodsVO getGoods(GoodsVO vo) {
 		return goodsDAO.getGoods(vo);
 	}
-
-	public List<GoodsVO> getGoodsList(GoodsVO vo) {
-		return goodsDAO.getGoodsList(vo);
-	}
+	
 }

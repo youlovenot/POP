@@ -18,7 +18,6 @@ import com.springbook.biz.member.MemberVO;
 public class MemberController {
 	@Autowired
 	MemberService memberService;
-
 	
 	// 검색 조건 목록 설정
 	@ModelAttribute("memberConditionMap")

@@ -27,11 +27,11 @@
     <header>
       <div id="header">
         <div id="header_top">
-          <div id="main_logo"><a href="/index.jsp"><img src="/img/main_logo2.png"></a></div>
+          <div id="main_logo"><a href="/"><img src="/img/main_logo2.png"></a></div>
         <ul id="top_menu">
           <li><a href="/logout.com">로그아웃</a></li>
-          <li><a href="/admin/mem_admin.jsp">회원관리</a></li>
-          <li><a href="/admin/goods_admin.jsp">굿즈</a></li>
+          <li><a href="/admin/member.com">회원관리</a></li>
+          <li><a href="/admin/goods.com">굿즈</a></li>
           <li><a href="/admin/board_admin.jsp">보드게임</a></li>
           <li><a href="/admin/game_admin.jsp">게임</a></li>
         </ul>
@@ -44,8 +44,12 @@
           <li class="title_a">상품등록</li>
         </ul>
         <div id="container_box">        
-          <form role="form" method="post" action="/insertGoods.do" autocomplete="off" enctype="multipart/form-data">
+          <form role="form" method="post" action="/insertGoods.com" autocomplete="off" enctype="multipart/form-data">
           <table> 
+          <tr class="inputArea">
+            <td><label for="gdsName">상품번호</label></td>
+            <td><input type="text" id="gdsSeq" name="seq" /></td>
+          </tr>
           <tr class="inputArea">
             <td><label for="gdsName">상품명</label></td>
             <td><input type="text" id="gdsName" name="name" /></td>
@@ -59,67 +63,31 @@
             <td><label for="gdsStock">상품재고</label></td>
             <td><input type="text" id="gdsStock" name="stock" /></td>
           </tr>
-          
-<<<<<<< HEAD
           <tr class="inputArea">
             <td><label for="gdsDes">상품설명</label></td>
-            <td><input type="file" name="detail1"></td>
+            <td><input type="file" name="d1upload"></td>
           </tr>
           <tr class="inputArea">
             <td><label for="gdsDes"></label></td>
-            <td><input type="file" name="detail2"></td>
+            <td><input type="file" name="d2upload"></td>
           </tr>
           <tr class="inputArea">
             <td><label for="gdsDes"></label></td>
-            <td><input type="file" name="detail3"></td>
+            <td><input type="file" name="d3upload"></td>
           </tr>
           <tr class="inputArea">
             <td><label for="gdsDes"></label></td>
-            <td><input type="file" name="detail4"></td>
+            <td><input type="file" name="d4upload"></td>
           </tr>
           <tr class="inputArea">
             <td><label for="gdsDes"></label></td>
-            <td><input type="file" name="detail5"></td>
+            <td><input type="file" name="d5upload"></td>
           </tr>
           
           <tr class="inputArea">
             <td><label for="gdsImg">이미지</label></td>
-            <td><input type="file" id="gdsImg" name="pimage" /></td>
-=======
-          <div class="inputArea">
-            <ul>
-            <li><label for="gdsDes">상품설명</label><li>
-            <li><input type="file" name="d1upload"></li><br>
-            <li><label for="gdsDes"></label></li>
-            <li><input type="file" name="d2upload"></li><br>
-            <li><label for="gdsDes"></label></li>
-            <li><input type="file" name="d3upload"></li><br>
-            <li><label for="gdsDes"></label></li>
-            <li><input type="file" name="d4upload"></li><br>
-            <li><label for="gdsDes"></label></li>
-            <li><input type="file" name="d5upload"></li><br>
-            </ul>
-          </div>
-          
-          <div class="inputArea">
-            <label for="gdsImg">이미지</label>
-            <input type="file" id="gdsImg" name="imgupload" />
->>>>>>> 03d78ab589da039111a97a617368967119ce4c6d
-            <div class="select_img"><img src="" /></div>
-          
-         
-            <script>
-              $("#gdsImg").change(function(){
-                if(this.files && this.files[0]) {
-                  var reader = new FileReader;
-                  reader.onload = function(data) {
-                    $(".select_img img").attr("src", data.target.result).width(500);								
-                  }
-                  reader.readAsDataURL(this.files[0]);
-                }
-              });
-            </script>
-            </div>
+            <td><input type="file" id="gdsImg" name="imgupload" /></td>
+            </tr>
           <tr class="inputArea">
             <td></td>
             <td><button type="submit" id="register_Btn" class="btn btn-primary">등록</button></td>			

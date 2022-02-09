@@ -53,7 +53,6 @@ public class MemberDAO{
 		}
 		return member;
 	}
-
 	
 	public List<MemberVO> getMemberList(MemberVO vo) {
 		return mybatis.selectList("MemberDAO.getMemberList", vo);

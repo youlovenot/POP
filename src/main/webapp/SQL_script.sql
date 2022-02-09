@@ -47,7 +47,7 @@ create table goods(
     pimage varchar(100),     /*상품이미지*/
     regDate datetime default CURRENT_TIMESTAMP	 /*상품등록날짜*/
 );
-
+ select * from goods;
 
 create table boardgame(
 	pId int(4) primary key,   /*상품번호*/

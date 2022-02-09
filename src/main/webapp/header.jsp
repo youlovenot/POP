@@ -32,7 +32,7 @@
           <div id="main_logo"><a href="/"><img src="/img/main_logo2.png"></a></div>
         <ul id="top_menu">
           <li><a href="/games/gameList.jsp">GAME</a></li>
-          <li><a href="/goodsShop/goods.jsp">GOODS SHOP</a></li>
+          <li><a href="/goods.com">GOODS SHOP</a></li>
           <li><a href="/boardGameShop/board_game.jsp">BOARD GAME SHOP</a></li>
           
         </ul>

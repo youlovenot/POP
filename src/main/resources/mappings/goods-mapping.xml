@@ -21,7 +21,25 @@
 	<insert id="insertGoods" parameterType="goods">
 		<![CDATA[
 			insert into goods(seq, name, price, stock, detail1, detail2, detail3, detail4, detail5, pimage)
-			values((select COALESCE(max(seq), 1000)+1 from goods),#{name},#{price},#{stock},#{detail1},#{detail2},#{detail3},#{detail4},#{detail5},#{pimage})
+			values(#{seq},#{name},#{price},#{stock},#{detail1},#{detail2},#{detail3},#{detail4},#{detail5},#{pimage})
 		]]>
 	</insert>
+	
+	<select id="getGoods" resultType="goods">
+		<![CDATA[
+			select * from goods where seq=#{seq}
+		]]>
+	</select>
+	
+	<select id="getGoodsList" resultMap="goodsResult">
+		select * from goods
+		where
+		<if test="searchCondition == 'SEQ'">
+			seq like CONCAT('%',#{searchKeyword},'%')
+		</if>
+		<if test="searchCondition == 'NAME'">
+			name like CONCAT('%',#{searchKeyword},'%')
+		</if>
+		order by seq asc
+	</select>
 </mapper>
