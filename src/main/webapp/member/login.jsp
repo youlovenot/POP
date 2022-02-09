@@ -9,6 +9,9 @@
   <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
   <link href="/css/common.css" rel="stylesheet" type="text/css">
   <link href="/member/css/login.css" rel="stylesheet" type="text/css">
+  <style>
+  #content #alert{text-align:center; color:#666666;}
+  </style>
   <script> 
     $(document).ready(function(){
       var height = $(".header_bottom").height();
