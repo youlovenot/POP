@@ -45,7 +45,7 @@
            <c:if test="${not empty memberId  }">
            	<li><a href="/logout.com">로그아웃</a></li>
 	           <c:if test="${memberId eq 'admin' }">
-	           		<li><a href="/admin/mem_admin.jsp">관리자페이지</a></li>
+	           		<li><a href="/admin/member.com">관리자페이지</a></li>
 	           </c:if>
 	           <c:if test="${memberId ne 'admin' }">
 		            <li><a href="/order/cart.jsp">장바구니</a></li>

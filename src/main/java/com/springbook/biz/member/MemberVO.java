@@ -10,7 +10,8 @@ public class MemberVO {
 	private String zipcode;
 	private String adress1;
 	private String adress2;
-	private String alert;
+	private String searchMCondition;
+	private String searchMKeyword;
 	
 	// Getter/Setter 메소드
 	public String getId() {
@@ -62,11 +63,17 @@ public class MemberVO {
 		this.adress2 = adress2;
 	}
 	
-	public String getAlert() {
-		return alert;
+	public String getSearchMCondition() {
+		return searchMCondition;
 	}
-	public void setAlert(String alert) {
-		this.alert = alert;
+	public void setSearchMCondition(String searchMCondition) {
+		this.searchMCondition = searchMCondition;
+	}
+	public String getSearchMKeyword() {
+		return searchMKeyword;
+	}
+	public void setSearchMKeyword(String searchMKeyword) {
+		this.searchMKeyword = searchMKeyword;
 	}
 	
 	@Override

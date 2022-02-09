@@ -9,7 +9,6 @@
 		<result property="title" column="TITLE"/>
 		<result property="content" column="CONTENT"/>
 		<result property="regDate" column="REGDATE"/>
-		<result property="cnt" column="CNT"/>
 	</resultMap>
 
 	<insert id="insertNotice" parameterType="notice">
@@ -37,7 +36,7 @@
 		]]>
 	</select>
 	
-	<select id="getNoticeList" resultMap="notice">
+	<select id="getNoticeList" resultMap="noticeResult">
 		select * from notice
 		where
 		<if test="searchCondition == 'TITLE'">

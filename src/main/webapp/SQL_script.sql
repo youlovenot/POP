@@ -26,8 +26,7 @@ create table notice(
 	seq int primary key,
     title varchar(20) not null,
     content text,
-    regdate datetime default CURRENT_TIMESTAMP,
-    cnt int default 0
+    regdate datetime default CURRENT_TIMESTAMP
 	);
     
 select * from notice order by seq desc;
@@ -36,10 +35,10 @@ insert into notice(seq, title, content)
 values(1, '제목1','내용1');
 
 create table goods(
-	seq int(4) primary key,   /*상품번호*/
+	seq int primary key,   /*상품번호*/
     name varchar(100),		  /*상품이름*/
-    price int(10),			  /*상품가격*/
-    stock int(3),			  /*상품재고*/
+    price int,			  /*상품가격*/
+    stock int,			  /*상품재고*/
 	detail1 varchar(100),	  		  /*상품설명*/
 	detail2 varchar(100),	  		  /*상품설명*/
 	detail3 varchar(100),	  		  /*상품설명*/

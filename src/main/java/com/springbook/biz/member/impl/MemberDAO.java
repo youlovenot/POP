@@ -3,15 +3,19 @@ package com.springbook.biz.member.impl;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.List;
 
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.springbook.biz.common.JDBCUtil;
 import com.springbook.biz.member.MemberVO;
 
-// DAO(Data Access Object)
-@Repository("memberDAO")
+@Repository
 public class MemberDAO{
+	@Autowired
+	private SqlSessionTemplate mybatis;
 	//JDBC 관련 변수
 	private Connection conn = null;
 	private PreparedStatement stmt = null;
@@ -48,5 +52,10 @@ public class MemberDAO{
 			JDBCUtil.close(rs,stmt,conn);
 		}
 		return member;
+	}
+
+	
+	public List<MemberVO> getMemberList(MemberVO vo) {
+		return mybatis.selectList("MemberDAO.getMemberList", vo);
 	}
 }

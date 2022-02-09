@@ -24,34 +24,4 @@
 			values((select COALESCE(max(seq), 1000)+1 from goods),#{name},#{price},#{stock},#{detail1},#{detail2},#{detail3},#{detail4},#{detail5},#{pimage})
 		]]>
 	</insert>
-	
-	<update id="updateNotice">
-		<![CDATA[
-			update board set title=#{title}, content=#{content} where seq=#{seq}
-		]]>
-	</update>
-	
-	<delete id="deleteNotice">
-		<![CDATA[
-			delete board where seq=#{seq}
-		]]>
-	</delete>
-	
-	<select id="getNotice" resultType="goods">
-		<![CDATA[
-			select * from board where seq=#{seq}
-		]]>
-	</select>
-	
-	<select id="getNoticeList" resultMap="notice">
-		select * from notice
-		where
-		<if test="searchCondition == 'TITLE'">
-			title like '%',#{searchKeyword},'%'
-		</if>
-		<if test="searchCondition == 'CONTENT'">
-			content like '%',#{searchKeyword},'%'
-		</if>
-		order by seq desc
-	</select>
 </mapper>

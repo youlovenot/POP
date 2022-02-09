@@ -11,7 +11,6 @@ public class NoticeVO {
 	private String title;
 	private String content;
 	private Date regDate;
-	private int cnt;
 	private String searchCondition;
 	private String searchKeyword;
 	private MultipartFile uploadFile;
@@ -47,14 +46,6 @@ public class NoticeVO {
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
-
-	public int getCnt() {
-		return cnt;
-	}
-
-	public void setCnt(int cnt) {
-		this.cnt = cnt;
-	}
 	
 	public String getSearchCondition() {
 		return searchCondition;
@@ -82,7 +73,7 @@ public class NoticeVO {
 	@Override
 	public String toString() {
 		return "NoticeVO [seq=" + seq + ", title=" + title + ", content=" + content
-				+ ", regDate=" + regDate + ", cnt=" + cnt + "]";
+				+ ", regDate=" + regDate + "]";
 	}
 
 }
