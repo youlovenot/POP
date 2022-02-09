@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -27,7 +28,7 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value="/login.do", method=RequestMethod.POST)
-	public String login(MemberVO vo, MemberDAO memberDAO, HttpServletResponse response, HttpSession session) throws IOException {
+	public String login(MemberVO vo, MemberDAO memberDAO, HttpServletResponse response, HttpSession session, Model model) throws IOException {
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		
@@ -40,8 +41,7 @@ public class LoginController {
 			return "redirect:" + referer;
 		}
 		else {
-			out.println("<script>alert('로그인 정보를 확인해주세요.');</script>");
-			out.flush();
+			vo.setAlert("로그인정보를 확인해 주세요.");
 			return "redirect:/member/login.jsp";
 		}
 	}

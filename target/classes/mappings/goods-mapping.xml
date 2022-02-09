@@ -18,10 +18,10 @@
 		<result property="regDate" column="REGDATE"/>
 	</resultMap>
 
-	<insert id="insertNotice" parameterType="notice">
+	<insert id="insertGoods" parameterType="goods">
 		<![CDATA[
-			insert into notice(seq, name, price, stock)
-			values((select nvl(max(seq), 0)+1 from board),#{name},#{price},#{stock})
+			insert into goods(seq, name, price, stock, detail1, detail2, detail3, detail4, detail5, pimage)
+			values((select COALESCE(max(seq), 1000)+1 from goods),#{name},#{price},#{stock},#{detail1},#{detail2},#{detail3},#{detail4},#{detail5},#{pimage})
 		]]>
 	</insert>
 	

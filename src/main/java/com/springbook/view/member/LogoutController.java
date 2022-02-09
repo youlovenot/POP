@@ -18,7 +18,6 @@ public class LogoutController {
 		if(Cpath.substring(fidx, lidx).equals("/admin")) {
 			Cpath = "/index.jsp";
 		}
-		System.out.println("현재 경로 : " + Cpath);
 		return "redirect:"+Cpath;
 	}
 	

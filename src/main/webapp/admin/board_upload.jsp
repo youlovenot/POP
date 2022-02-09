@@ -10,8 +10,6 @@
 <style>
 .section{margin: 80px 0 30px 0;text-align: center;}
 .inputArea { margin:10px 0; }
-.inputArea ul li{display:inline-block;padding:1px;}
-.inputArea ul li input{margin-bottom:2px; text-align:left;}
 select { width:100px; }
 label { display:inline-block; width:70px; padding:5px; }
 label[for='gdsDes'] { display:block; }
@@ -53,38 +51,32 @@ div#container_box { float:right; width:calc(100% - 200px - 20px); }
           <form role="form" method="post" action="/insertGoods.do" autocomplete="off" enctype="multipart/form-data">
           
           <div class="inputArea">
-            <label for="gdsName">상품명</label>
-            <input type="text" id="gdsName" name="name" />
-          </div>
-          
-          <div class="inputArea">
-            <label for="gdsPrice">상품가격</label>
-            <input type="text" id="gdsPrice" name="price" />
-          </div>
-          
-          <div class="inputArea">
-            <label for="gdsStock">상품재고</label>
-            <input type="text" id="gdsStock" name="stock" />
-          </div>
-          
-          <div class="inputArea">
             <ul>
-            <li><label for="gdsDes">상품설명</label><li>
-            <li><input type="file" name="d1upload"></li><br>
-            <li><label for="gdsDes"></label></li>
-            <li><input type="file" name="d2upload"></li><br>
-            <li><label for="gdsDes"></label></li>
-            <li><input type="file" name="d3upload"></li><br>
-            <li><label for="gdsDes"></label></li>
-            <li><input type="file" name="d4upload"></li><br>
-            <li><label for="gdsDes"></label></li>
-            <li><input type="file" name="d5upload"></li><br>
+            
+            <li><label for="gdsName">상품명</label></li>
+            <li><input type="text" id="gdsName" name="gdsName" /></li>
+            
             </ul>
           </div>
           
           <div class="inputArea">
+            <label for="gdsPrice">상품가격</label>
+            <input type="text" id="gdsPrice" name="gdsPrice" />
+          </div>
+          
+          <div class="inputArea">
+            <label for="gdsStock">상품재고</label>
+            <input type="text" id="gdsStock" name="gdsStock" />
+          </div>
+          
+          <div class="inputArea">
+            <label for="gdsDes">상품설명</label>
+            <textarea rows="5" cols="50" id="gdsDes" name="gdsDes"></textarea> 
+          </div>
+          
+          <div class="inputArea">
             <label for="gdsImg">이미지</label>
-            <input type="file" id="gdsImg" name="imgupload" />
+            <input type="file" id="gdsImg" name="file" />
             <div class="select_img"><img src="" /></div>
             
             <script>

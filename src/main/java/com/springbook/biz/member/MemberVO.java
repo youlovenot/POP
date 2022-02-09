@@ -10,6 +10,7 @@ public class MemberVO {
 	private String zipcode;
 	private String adress1;
 	private String adress2;
+	private String alert;
 	
 	// Getter/Setter 메소드
 	public String getId() {
@@ -59,6 +60,13 @@ public class MemberVO {
 	}
 	public void setAdress2(String adress2) {
 		this.adress2 = adress2;
+	}
+	
+	public String getAlert() {
+		return alert;
+	}
+	public void setAlert(String alert) {
+		this.alert = alert;
 	}
 	
 	@Override
