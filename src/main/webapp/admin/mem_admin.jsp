@@ -70,8 +70,8 @@
                 <td>${member.phone }</td>
                 <td>${member.adress1 } ${member.adress2 }</td>
                 <td>
-                    <button>수정</button>
-                    <button>삭제</button>
+                    <button onclick="location.href='/admin/updateMember.com?id=${member.id}&password=${member.password }'">수정</button>
+                    <button onclick="location.href='/deleteMember.com?id=${member.id}&password=${member.password }'">삭제</button>
                 </td>
             </tr>
             </c:forEach>

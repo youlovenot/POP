@@ -10,7 +10,8 @@ create table member(
 	email varchar(20),
 	zipcode varchar(20),
 	adress1 varchar(20),
-	adress2 varchar(20)
+	adress2 varchar(20),
+	adress3 varchar(20)
     );
 
 insert into member(id, password, name)
@@ -18,7 +19,7 @@ values('admin','admin1234', '관리자');
 insert into member(id, password, name)
 values('test','test123','테스트');
 insert into member
-values('userID','Pa$$w0rd', '사용자','010-1111-1111', 'email@naver.com','123-456','메롱시티','파인에플집'); 
+values('userID','Pa$$w0rd', '사용자','010-1111-1111', 'email@email.com','12345','주소','상세주소','주소참고항목'); 
 
 select * from member;
 

@@ -63,7 +63,10 @@
             <td><label for="gdsStock">상품재고</label></td>
             <td><input type="text" id="gdsStock" name="stock" /></td>
           </tr>
+<<<<<<< HEAD
 
+=======
+>>>>>>> c8c2f3bf3720464eb858e8e6b115e955adc5c029
           <tr class="inputArea">
             <td><label for="gdsDes">상품설명</label></td>
             <td><input type="file" name="d1upload"></td>
@@ -87,10 +90,15 @@
           
           <tr class="inputArea">
             <td><label for="gdsImg">이미지</label></td>
+<<<<<<< HEAD
 
             <td><input type="file" id="gdsImg" name="imgupload" /></td>
           </tr>
           
+=======
+            <td><input type="file" id="gdsImg" name="imgupload" /></td>
+            </tr>
+>>>>>>> c8c2f3bf3720464eb858e8e6b115e955adc5c029
           <tr class="inputArea">
             <td></td>
             <td><button type="submit" id="register_Btn" class="btn btn-primary">등록</button></td>			

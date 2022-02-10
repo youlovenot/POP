@@ -13,7 +13,30 @@
 		<result property="zipcode" column="ZIPCODE"/>
 		<result property="adress1" column="ADRESS1"/>
 		<result property="adress2" column="ADRESS2"/>
+		<result property="adress3" column="ADRESS3"/>
 	</resultMap>
+
+	<insert id="insertMember" parameterType="member">
+		<![CDATA[
+			insert into member(id, password, name, phone, email, zipcode, adress1, adress2, adress3)
+			values(#{id},#{password},#{name},#{phone},#{email},#{zipcode},#{adress1},#{adress2},#{adress3})
+		]]>
+	</insert>
+
+	<update id="updateMember">
+		<![CDATA[
+			update member
+			set password=#{password}, name=#{name}, phone=#{phone}, email=#{email}, zipcode=#{zipcode}, adress1=#{adress1}, adress2=#{adress2}, adress3=#{adress3}
+			where id=#{id}
+		]]>
+	</update>
+
+	<delete id="deleteMember">
+		<![CDATA[
+			delete from member
+			where id=#{id} and password=#{password}
+		]]>
+	</delete>
 
 	<select id="getMemberList" resultMap="memberResult">
 		select * from member

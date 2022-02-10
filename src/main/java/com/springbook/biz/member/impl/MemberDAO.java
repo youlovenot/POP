@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import com.springbook.biz.common.JDBCUtil;
 import com.springbook.biz.member.MemberVO;
+import com.springbook.biz.notice.NoticeVO;
 
 @Repository
 public class MemberDAO{
@@ -45,6 +46,7 @@ public class MemberDAO{
 				member.setZipcode(rs.getString("ZIPCODE"));
 				member.setAdress1(rs.getString("ADRESS1"));
 				member.setAdress2(rs.getString("ADRESS2"));
+				member.setAdress3(rs.getString("ADRESS3"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -52,6 +54,18 @@ public class MemberDAO{
 			JDBCUtil.close(rs,stmt,conn);
 		}
 		return member;
+	}
+
+	public void insertMember(MemberVO vo) {
+		mybatis.insert("MemberDAO.insertMember", vo);
+	}
+
+	public void updateMember(MemberVO vo) {
+		mybatis.update("MemberDAO.updateMember", vo);
+	}
+
+	public void deleteMember(MemberVO vo) {
+		mybatis.delete("MemberDAO.deleteMember", vo);
 	}
 	
 	public List<MemberVO> getMemberList(MemberVO vo) {

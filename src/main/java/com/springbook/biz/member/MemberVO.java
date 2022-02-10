@@ -10,6 +10,7 @@ public class MemberVO {
 	private String zipcode;
 	private String adress1;
 	private String adress2;
+	private String adress3;
 	private String searchMCondition;
 	private String searchMKeyword;
 	
@@ -74,6 +75,13 @@ public class MemberVO {
 	}
 	public void setSearchMKeyword(String searchMKeyword) {
 		this.searchMKeyword = searchMKeyword;
+	}
+	
+	public String getAdress3() {
+		return adress3;
+	}
+	public void setAdress3(String adress3) {
+		this.adress3 = adress3;
 	}
 	
 	@Override
