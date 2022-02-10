@@ -67,7 +67,7 @@ public class MemberController {
 	
 	// 회원가입 처리
 	@RequestMapping(value="/join.com", method=RequestMethod.GET)
-	public String joinView(MemberVO vo) {
+	public String joinView() {
 		return "/member/join.jsp";
 	}
 	@RequestMapping(value="/join.com", method=RequestMethod.POST)
