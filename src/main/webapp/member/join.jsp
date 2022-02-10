@@ -159,15 +159,19 @@
         <div>
             <h3 class="join_title"><label for="address">주소</label></h3>
             <span class="s_box int_address">
-                <input type="text" name="zipcode" id="sample6_postcode" placeholder="우편번호" readonly value="${member.zipcode }">
+                <input type="text" class="int" name="zipcode" id="sample6_postcode" placeholder="우편번호" readonly value="${member.zipcode }">
+            </span> 
+            <span class="int_address">
                 <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
             </span> 
             <span class="box int_address">
-                <input type="text" name="adress1" id="sample6_address" placeholder="주소" readonly value="${member.adress1 }">
+                <input type="text" class="int" name="adress1" id="sample6_address" placeholder="주소" readonly value="${member.adress1 }">
             </span>  
-            <span class="box int_address">
-                <input type="text" name="adress2" id="sample6_detailAddress" placeholder="상세주소" value="${member.adress2 }">
-                <input type="text" name="adress3" id="sample6_extraAddress" placeholder="참고항목" readonly value="${member.adress3 }">
+            <span class="s_box int_address">
+                <input type="text" class="int" name="adress2" id="sample6_detailAddress" placeholder="상세주소" value="${member.adress2 }">   
+            </span> 
+            <span class="s_box int_address">
+                <input type="text" class="int" name="adress3" id="sample6_extraAddress" placeholder="참고항목" readonly value="${member.adress3 }">
             </span> 
         </div>
         <!-- JOIN BTN-->

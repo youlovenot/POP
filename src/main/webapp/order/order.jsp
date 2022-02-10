@@ -267,7 +267,7 @@
                 
                     name: '주문명:결제',
                 
-                    amount: 10,
+                    amount: 21300,
                 
                     buyer_email: 'popgames@pop.com',
                     buyer_name: '팝게임즈',

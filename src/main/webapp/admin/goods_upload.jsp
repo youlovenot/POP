@@ -85,7 +85,7 @@
           <tr class="inputArea">
             <td><label for="gdsImg">이미지</label></td>
             <td><input type="file" id="gdsImg" name="imgupload" /></td>
-            </tr>
+          </tr>
           <tr class="inputArea">
             <td></td>
             <td><button type="submit" id="register_Btn" class="btn btn-primary">등록</button></td>			

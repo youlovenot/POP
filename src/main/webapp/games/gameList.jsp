@@ -8,7 +8,12 @@
   <link rel="shortcut icon" type="image⁄x-icon" href="/img/favicon.ico">
   <link href="/css/common.css" rel="stylesheet" type="text/css">
   <link href="/css/goods.css" rel="stylesheet" type="text/css">
-  
+  <style>
+  #panorama_items .item_box img {
+    width: 100%;
+    height:260px;
+  }
+  </style>
 </head>
 <body>
   <div id="container">
@@ -31,7 +36,7 @@
         <div class="item_box">
           <ul>
             <a href="/games/game_detail.jsp">
-              <li><img src="/img/flashgame/스네이크게임.jpg"></li>
+              <li><img src="/img/flashgame/스네이크 메인.png"></li>
               <li>스네이크게임</li>
               <li>장르 : 아케이드</li>
             </a>
@@ -40,138 +45,15 @@
         <div class="item_box">
           <ul>
             <a href="/games/game_detail.jsp">
-              <li><img src="/img/flashgame/스네이크게임.jpg"></li>
-                <li>리듬게임(이름미정)</li>
-                <li>장르 : 리듬게임</li>
-            </a>
-          </ul>
-        </div>
-        <div class="item_box">
-          <ul>
-            <a href="/games/game_detail.jsp">
-              <li><img src="/img/flashgame/루미큐브.jpg"></li>
-                <li>리듬게임(이름미정)</li>
-                <li>장르 : 리듬게임</li>
+              <li><img src="/img/flashgame/리듬 메인.png"></li>
+                <li>리듬게임</li>
+                <li>장르 : 아케이드</li>
             </a>
           </ul>
         </div>
       </div>
       <div class="clear"></div>
-      <div id="panorama_items">
-        <div class="item_box">
-          <ul>
-            <a href="/games/game_detail.jsp">
-              <li><img src="/img/flashgame/루미큐브.jpg"></li>
-                <li>리듬게임(이름미정)</li>
-                <li>장르 : 리듬게임</li>
-            </a>
-          </ul>
-        </div>
-        <div class="item_box">
-          <ul>
-            <a href="/games/game_detail.jsp">
-              <li><img src="../img/flashgame/루미큐브.jpg"></li>
-                <li>리듬게임(이름미정)</li>
-                <li>장르 : 리듬게임</li>
-            </a>
-          </ul>
-        </div>
-        <div class="item_box">
-          <ul>
-            <a href="/games/game_detail.jsp">
-              <li><img src="../img/flashgame/루미큐브.jpg"></li>
-                <li>리듬게임(이름미정)</li>
-                <li>장르 : 리듬게임</li>
-            </a>
-          </ul>
-        </div>
-        <div class="item_box">
-          <ul>
-            <a href="/games/game_detail.jsp">
-              <li><img src="/img/flashgame/루미큐브.jpg"></li>
-                <li>리듬게임(이름미정)</li>
-                <li>장르 : 리듬게임</li>
-            </a>
-          </ul>
-        </div>
-      </div>
-      <div class="clear"></div>
-      <div id="panorama_items">
-        <div class="item_box">
-          <ul>
-            <a href="/games/game_detail.jsp">
-              <li><img src="/img/flashgame/루미큐브.jpg"></li>
-                <li>리듬게임(이름미정)</li>
-                <li>장르 : 리듬게임</li>
-            </a>
-          </ul>
-        </div>
-        <div class="item_box">
-          <ul>
-            <a href="/games/game_detail.jsp">
-             <li><img src="/img/flashgame/루미큐브.jpg"></li>
-                <li>리듬게임(이름미정)</li>
-                <li>장르 : 리듬게임</li>
-            </a>
-          </ul>
-        </div>
-        <div class="item_box">
-          <ul>
-           	<a href="/games/game_detail.jsp">
-              <li><img src="/img/flashgame/루미큐브.jpg"></li>
-                <li>리듬게임(이름미정)</li>
-                <li>장르 : 리듬게임</li>
-            </a>
-          </ul>
-        </div>
-        <div class="item_box">
-          <ul>
-            <a href="/games/product_detail.jsp">
-              <li><img src="/img/flashgame/루미큐브.jpg"></li>
-                <li>리듬게임(이름미정)</li>
-                <li>장르 : 리듬게임</li>
-            </a>
-          </ul>
-        </div>
-      </div>
-      <div id="panorama_items">
-        <div class="item_box">
-          <ul>
-            <a href="#">
-              <<li><img src="/img/flashgame/루미큐브.jpg"></li>
-                <li>리듬게임(이름미정)</li>
-                <li>장르 : 리듬게임</li>
-            </a>
-          </ul>
-        </div>
-        <div class="item_box">
-          <ul>
-            <a href="#">
-              <li><img src="/img/flashgame/루미큐브.jpg"></li>
-                <li>리듬게임(이름미정)</li>
-                <li>장르 : 리듬게임</li>
-            </a>
-          </ul>
-        </div>
-        <div class="item_box">
-          <ul>
-            <a href="#">
-              <li><img src="/img/flashgame/루미큐브.jpg"></li>
-                <li>리듬게임(이름미정)</li>
-                <li>장르 : 리듬게임</li>
-            </a>
-          </ul>
-        </div>
-        <div class="item_box">
-          <ul>
-            <a href="#">
-              <li><img src="/img/flashgame/루미큐브.jpg"></li>
-                <li>리듬게임(이름미정)</li>
-                <li>장르 : 리듬게임</li>
-            </a>
-          </ul>
-        </div>
-      </div>
+
     </main>
     <div class="clear"></div>
     <%@ include file="/footer.jsp" %>
