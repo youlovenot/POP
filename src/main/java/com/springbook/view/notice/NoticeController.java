@@ -67,14 +67,14 @@ public class NoticeController {
 	}
 	
 	//글 목록 검색
-	@RequestMapping("/NoticeList.com")
+	@RequestMapping("/noticeList.com")
 	public ModelAndView getNoticeList(NoticeVO vo) {
 		ModelAndView mav = new ModelAndView();
 		// Null Check
 		if(vo.getSearchCondition()==null) vo.setSearchCondition("TITLE");
 		if(vo.getSearchKeyword()==null) vo.setSearchKeyword("");
 		// Model 정보 저장
-		mav.setViewName("/getNoticeList.jsp");
+		mav.setViewName("/notice/noticeList.jsp");
 		mav.addObject("noticeList", noticeService.getNoticeList(vo));
 		return mav;
 	}

@@ -41,10 +41,10 @@
 		select * from notice
 		where
 		<if test="searchCondition == 'TITLE'">
-			title like '%',#{searchKeyword},'%'
+			title like CONCAT('%',#{searchKeyword},'%')
 		</if>
 		<if test="searchCondition == 'CONTENT'">
-			content like '%',#{searchKeyword},'%'
+			content like CONCAT('%',#{searchKeyword},'%')
 		</if>
 		order by seq desc
 	</select>

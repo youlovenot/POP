@@ -38,19 +38,20 @@
             <tr class="tr">
                 <th>글번호</th>
                 <th>제목</th>
-                <th>내용</th>
                 <th>게시일</th>
             </tr>
             
-			<c:forEach items="${noticeList }" var="member">
+			<c:forEach items="${noticeList }" var="notice">
             <tr class="tr">
                 <td>${notice.seq }</td>
-                <td>${notice.name }</td>
-                <td>${notice.content }</td>
+                <td>${notice.title }</td>
                 <td>${notice.regDate }</td>
             </tr>
             </c:forEach>
           </table>
+          <c:if test="${memberId eq 'admin' }">
+          <button onclick="location.href='/admin/insertNotice.com'">글 등록</button>
+          </c:if>
     <%@ include file="/footer.jsp" %>
 </body>
 </html>
