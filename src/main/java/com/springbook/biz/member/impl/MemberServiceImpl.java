@@ -21,7 +21,20 @@ public class MemberServiceImpl implements MemberService {
 		return memberDAO.getMember(vo);
 	}
 
+	public void insertMember(MemberVO vo) {
+		memberDAO.insertMember(vo);
+	}
+	
 	public List<MemberVO> getMemberList(MemberVO vo) {
 		return memberDAO.getMemberList(vo);
 	}
+
+	public void updateMember(MemberVO vo) {
+		memberDAO.updateMember(vo);
+	}
+
+	public void deleteMember(MemberVO vo) {
+		memberDAO.deleteMember(vo);
+	}
+
 }
