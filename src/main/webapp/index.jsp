@@ -5,7 +5,7 @@
   <title>pop games</title>
   <script src="/js/jquery-3.2.1.min.js"></script>
   <script src="/js/index.js"></script>
-  <link rel="shortcut icon" type="image⁄x-icon" href="/img/favicon.ico">
+  <link rel="icon" type="image⁄x-icon" href="/img/favicon.ico"/>
   <link href="/css/common.css" rel="stylesheet" type="text/css">
   <link href="/css/main.css" rel="stylesheet" type="text/css">
   <script> 
@@ -35,11 +35,11 @@
 <div id="divpop" style="position:absolute;left:370px;top:50px;z-index:200;visibility:hidden;"> 
   <table> 
   <tr> 
-      <td> 
+      <td>  
       <img src="/img/notice1.png">
       </td> 
   </tr> 
-  <tr> 
+  	<tr> 
       <form name="notice_form"> 
       <td align=right bgcolor=white style="font-size: 14px;"> 
           <input type="checkbox" name="chkbox" value="checkbox">오늘 하루 이 창을 열지 않음 
