@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
 
 import com.springbook.biz.common.JDBCUtil;
 import com.springbook.biz.member.MemberVO;
-import com.springbook.biz.notice.NoticeVO;
 
 @Repository
 public class MemberDAO{

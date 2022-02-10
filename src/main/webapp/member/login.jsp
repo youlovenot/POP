@@ -77,7 +77,7 @@
         <ul class="find_wrap" id="find_wrap">
             <li><a target="_blank" href="find_id.jsp"
                    class="find_text">ID/PW 찾기 &nbsp;|</a></li>
-            <li><a href="join.com" class="find_text">&nbsp;회원가입</a>
+            <li><a href="/join.com" class="find_text">&nbsp;회원가입</a>
             </li>
 
         </ul>

@@ -58,7 +58,6 @@
             <td><label for="gdsPrice">상품가격</label></td>
             <td><input type="text" id="gdsPrice" name="price" /></td>
           </tr>
-          
           <tr class="inputArea">
             <td><label for="gdsStock">상품재고</label></td>
             <td><input type="text" id="gdsStock" name="stock" /></td>
@@ -83,7 +82,6 @@
             <td><label for="gdsDes"></label></td>
             <td><input type="file" name="d5upload"></td>
           </tr>
-          
           <tr class="inputArea">
             <td><label for="gdsImg">이미지</label></td>
             <td><input type="file" id="gdsImg" name="imgupload" /></td>
@@ -99,5 +97,6 @@
     </main>
     <div class="clear"></div>
     <%@ include file="/footer.jsp" %>
+    </div>
 </body>
 </html>

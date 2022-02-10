@@ -17,7 +17,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.springbook.biz.member.MemberService;
 import com.springbook.biz.member.MemberVO;
-import com.springbook.biz.notice.NoticeVO;
 
 @Controller
 @SessionAttributes("member")
@@ -67,8 +66,11 @@ public class MemberController {
 	
 	// 회원가입 처리
 	@RequestMapping(value="/join.com", method=RequestMethod.GET)
-	public String joinView(MemberVO vo) {
-		return "/member/join.jsp";
+	public ModelAndView joinView() {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("member", new MemberVO());
+		mav.setViewName("/member/join.jsp");
+		return mav;
 	}
 	@RequestMapping(value="/join.com", method=RequestMethod.POST)
 	public String insertMember(MemberVO vo) {
@@ -78,7 +80,7 @@ public class MemberController {
 	
 	// 회원 수정
 	@RequestMapping("/admin/updateMemberP.com")
-	public String updateMember(@ModelAttribute("member") MemberVO vo) {
+	public String updateMember(MemberVO vo) {
 		memberService.updateMember(vo);
 		return "redirect:/admin/member.com";
 	}

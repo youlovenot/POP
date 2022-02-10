@@ -27,7 +27,8 @@ create table notice(
 	seq int primary key,
     title varchar(20) not null,
     content text,
-    regdate datetime default CURRENT_TIMESTAMP
+    image varchar(20),
+    regDate datetime default CURRENT_TIMESTAMP
 	);
     
 select * from notice order by seq desc;

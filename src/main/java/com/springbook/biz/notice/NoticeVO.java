@@ -10,6 +10,7 @@ public class NoticeVO {
 	private int seq;
 	private String title;
 	private String content;
+	private String image;
 	private Date regDate;
 	private String searchCondition;
 	private String searchKeyword;
@@ -70,6 +71,12 @@ public class NoticeVO {
 		this.uploadFile = uploadFile;
 	}
 	
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
 	@Override
 	public String toString() {
 		return "NoticeVO [seq=" + seq + ", title=" + title + ", content=" + content

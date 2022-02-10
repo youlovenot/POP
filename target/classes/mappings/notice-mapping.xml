@@ -8,13 +8,14 @@
 		<id property="seq" column="SEQ"/>
 		<result property="title" column="TITLE"/>
 		<result property="content" column="CONTENT"/>
+		<result property="image" column="IMAGE"/>
 		<result property="regDate" column="REGDATE"/>
 	</resultMap>
 
 	<insert id="insertNotice" parameterType="notice">
 		<![CDATA[
-			insert into notice(seq, title, content)
-			values((select nvl(max(seq), 0)+1 from board),#{title},#{content})
+			insert into notice(seq, title, content, image)
+			values((select nvl(max(seq), 0)+1 from board),#{title},#{content},#{image})
 		]]>
 	</insert>
 	

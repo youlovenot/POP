@@ -15,42 +15,42 @@
     <br>
     <br>
     <h1>공지사항</h1>
-    <br>
-    <br>
-    <table>
-    <tr>
-    <th class = "num">번호</th>
-    <th class = "text">내용</th>
-    <th class = "writer">게시자</th>
-    <th class = "date">등록일</th>
-    <th class = "count">조회수</th>
-    </tr>
-    <tr>
-    <td class = "num">2</td>
-    <td class = "text">필독!! 설 연휴 배송 공지사항입니다.</td>
-    <td class = "writer">관리자</td>
-    <td class = "date">2022.02.07</td>	
-    <td class = "count">0</td>
-    </tr>
-    <tr>
-    <td class = "num">1</td>
-    <td class = "text">배송지연 공지사항입니다.</td>
-    <td class = "writer">관리자</td>
-    <td class = "date">2022.01.30</td>
-    <td class = "count">5</td>
-    </tr>
-    </table>
-    <br><br>
-    <form id = "notice">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <select>
-    <option>내용</option>
-    <option>번호</option>
-    </select>
-    <input type="text">
-    <button>검색</button>
-    </form>
-    <br><br>
+          <!-- 멤버 검색 -->
+          <FORM method="post" action="/admin/member.com">
+            <TABLE class="search">
+             <TR>
+              <TD class="search_select"> 
+               <SELECT name="searchCondition" >
+				<c:forEach items="${noticeConditionMap }" var="option">
+					<option value="${option.value }">${option.key }
+				</c:forEach>
+               </SELECT>
+              </TD>
+              <TD class="search_select">
+               <INPUT type=text size="17" name="searchKeyword" >
+              </TD>
+              <TD class="search_select"><input type="image" src="/img/serach.gif"></TD>
+             </TR>
+            </TABLE>
+            </FORM>
+            
+          <table class="table">
+            <tr class="tr">
+                <th>글번호</th>
+                <th>제목</th>
+                <th>내용</th>
+                <th>게시일</th>
+            </tr>
+            
+			<c:forEach items="${noticeList }" var="member">
+            <tr class="tr">
+                <td>${notice.seq }</td>
+                <td>${notice.name }</td>
+                <td>${notice.content }</td>
+                <td>${notice.regDate }</td>
+            </tr>
+            </c:forEach>
+          </table>
     <%@ include file="/footer.jsp" %>
 </body>
 </html>

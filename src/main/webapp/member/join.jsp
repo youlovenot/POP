@@ -87,7 +87,12 @@
     <%@ include file="/header.jsp" %>
      <main class="main">
       <ul class="section_name">
+    <c:if test="${empty member }">
         <li class="title">회원가입</li>
+    </c:if>
+    <c:if test="${not empty member }">
+        <li class="title">회원수정</li>
+    </c:if>
       </ul>
 <!-- wrapper -->
 <div id="wrapper">
