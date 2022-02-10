@@ -32,6 +32,7 @@
   }
   #panorama_items .item_box img {
     width: 100%;
+    height:260px;
   }
   #panorama_items .item_box li {
     font-weight: bold;

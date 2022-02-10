@@ -67,7 +67,7 @@
                 <td>${goods.stock }</td>
                 <td>
                 	<c:if test="${not empty goods.detail1 }">
-                	<img src="${imgpath}${goods.detail1 }" width="100px" height="100px" class="click_img" style="cursor:pointer" onclick="window.open(this.src,'info','width='+this.naturalWidth+' height='+this.naturalHeight+' menubar=no status=no toolbar=no location=no'); return false;"> 
+                	<img src="${imgpath}${goods.detail1 }" width="100px" height="100px" class="click_img" style="cursor:pointer" onclick="window.open(this.src,'info','width='+this.naturalWidth+' height='+this.naturalHeight+'menubar=no status=no toolbar=no location=no'); return false;"> 
                 	</c:if>
                 	<c:if test="${not empty goods.detail2 }">
                 	<img src="${imgpath}${goods.detail2 }" width="100px" height="100px" class="click_img" style="cursor:pointer" onclick="window.open(this.src,'info','width='+this.naturalWidth+' height='+this.naturalHeight+' menubar=no status=no toolbar=no location=no'); return false;"> 

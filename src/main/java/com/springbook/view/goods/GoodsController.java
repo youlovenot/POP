@@ -25,7 +25,7 @@ public class GoodsController {
 	// 상품 등록
 	@RequestMapping("/insertGoods.com")
 	public String insertGoods(GoodsVO vo) throws IOException {
-		String path = "C:/LSH/POP/src/main/webapp/goodsShop/img/";
+		String path = "C:/LAS/POP/src/main/webapp/goodsShop/img/";
 		MultipartFile[] getUpload = vo.getDupload();
 		String[] fileNames = new String[5];
 		for(int i=0;i<5;i++) {
