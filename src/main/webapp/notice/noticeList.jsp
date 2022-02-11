@@ -10,11 +10,9 @@
 </head>
 <body>
     <%@ include file="/header.jsp" %>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1>공지사항</h1>
+    <ul class="section">
+            <li class="title_a">공지사항</li>
+          </ul>
           <!-- 멤버 검색 -->
           <FORM method="post" action="/admin/member.com">
             <TABLE class="search">
@@ -34,15 +32,26 @@
             </TABLE>
             </FORM>
             
-          <table class="table">
-            <tr class="tr">
-                <th>글번호</th>
-                <th>제목</th>
-                <th>게시일</th>
-            </tr>
-            
+           <div class="board_zone_cont">
+         <div class="board_zone_list" >
+            <table class="board_list_table" style="width:100%">
+                <colgroup>
+                    <col style="width:6%">
+                    <col style="width:37%;">
+                    <col style="width:12%">
+                    <col style="width:7%">
+                    <col style="width:15%">
+                </colgroup>
+                <thead>
+                 <tr>
+                    <th style="width: 6%;">번호</th>
+                    <th>제목</th>
+                    <th style="width: 15%;">날짜</th>
+                </tr>
+                </thead>
+                <tbody>
 			<c:forEach items="${noticeList }" var="notice">
-            <tr class="tr">
+            <tr>
                 <td>${notice.seq }</td>
                 <td>${notice.title }</td>
                 <td>${notice.regDate }</td>
