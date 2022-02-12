@@ -47,3 +47,7 @@ form #notice
     margin-left: 70%;
     margin-bottom: 20px;
 }
+#inserNoti{
+	padding: 12px 20px;
+	text-align: right;
+}

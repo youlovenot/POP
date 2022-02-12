@@ -36,6 +36,7 @@ select * from notice order by seq desc;
 insert into notice(seq, title, content)
 values(1, '제목1','내용1');
 
+
 create table goods(
 	seq int primary key,   /*상품번호*/
     name varchar(100),		  /*상품이름*/

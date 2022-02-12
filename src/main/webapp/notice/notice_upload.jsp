@@ -7,8 +7,32 @@
   <script src="/js/index.js"></script>
   <link rel="shortcut icon" type="image⁄x-icon" href="/img/favicon.ico">
   <link href="/css/common.css" rel="stylesheet" type="text/css">
-  <link href="/css/notice.css" rel="stylesheet" type="text/css">
-  
+  <style>
+  .section_name {
+	    text-align: center;
+    	justify-content: center;
+    	padding-bottom: 150px;
+    	padding-left: 200px;
+  }
+  #title {
+  	height: 50px;
+  	width: 500px;
+  	font-size: 30px;
+  	padding-left: 10px;
+  }
+  .title {
+  	padding-top: 20px;
+  }
+  .notice{
+    display: flex;
+}
+#notice_ex{
+}
+.title textarea{
+    font-size: 20px;
+  	padding-left: 5px;
+}
+  </style>
 </head>
 <body>
   <div id="container">
@@ -16,15 +40,17 @@
     <main>
     <form action="/admin/insertNotice.com" enctype="multipart/form-data" method="POST">
        <ul class="section_name">
-        <li class="title"><input type="text" placeholder="공지제목" name="title"></li>
+	       <li class="title">공지제목<br>
+	       <input type="text" placeholder="공지제목" name="title" id="title"></li>
+	       <div class="clear"/>
+	       <li class="title"> 이미지 파일 업로드<br>
+	       <input type="file" name="uploadFile"></li>
+	       <div class="clear"/>
+	       <li class="title">공지내용 <br>
+	       <textarea rows="10" cols="60" placeholder="공지내용" name="content"></textarea></li>
+	       <div class="clear"/>
+	       <li><input type="submit" value="등록"></li>
       </ul>
-      <div class="notice">
-        <input type="file" name="uploadFile">이미지파일업로드
-      </div>
-      <ul id="notice_ex">
-        <li><textarea rows="50" cols="100" placeholder="공지내용" name="content"></textarea></li>
-      </ul>
-            <ul><li><input type="submit" value="등록"></li></ul>	
       </form>
     </main>
     <div class="clear"></div>

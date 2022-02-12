@@ -1,12 +1,66 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html lang="ko">
 <head>
   <title>pop games</title>
   <script src="/js/jquery-3.2.1.min.js"></script>
   <script src="/js/index.js"></script>
   <link rel="shortcut icon" type="image⁄x-icon" href="/img/favicon.ico">
-  <link href="/notice/css/noticeList.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+  .board_list_table{
+      margin:50px 0 100px 200px;
+      text-align: center;
+      border-collapse: collapse;
+  }
+  .board_list_table tr th{
+    padding: 13px;
+    border-bottom: 1px solid #dbdbdb;
+    border-top: 1px solid #dbdbdb;
+    background-color: #f3f3f3;
+  }
+  .board_list_table tr .dat{
+    padding: 12px;
+    border-bottom: 1px solid #dbdbdb;
+  }
+h1
+{
+	text-align: center;
+}
+
+.text
+{
+	width : 800px;
+	height : 50px;
+}
+
+form #notice
+{
+	float:right;
+}
+
+.section{
+    margin: 80px 0 80px 0;
+    text-align: center;
+  }
+.section li {
+     display: inline-block;
+    margin: 5px;
+}
+.section .title_a {
+    font-size: 40px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.search{
+    margin-left: 70%;
+    margin-bottom: 20px;
+}
+#inserNoti{
+	padding: 12px 20px;
+	text-align: right;
+}
+</style>
 </head>
 <body>
     <%@ include file="/header.jsp" %>
@@ -52,15 +106,17 @@
                 <tbody>
 			<c:forEach items="${noticeList }" var="notice">
             <tr>
-                <td>${notice.seq }</td>
-                <td>${notice.title }</td>
-                <td>${notice.regDate }</td>
+                <td class="dat">${notice.seq }</td>
+                <td class="dat"><a href="/notice_view.com?seq=${notice.seq }">${notice.title }</a></td>
+                <td class="dat"><fmt:formatDate value="${notice.regDate }" pattern="yyyy-MM-dd"/></td>
             </tr>
             </c:forEach>
-          </table>
+            <tr><td id="inserNoti" colspan="3">
           <c:if test="${memberId eq 'admin' }">
-          <button onclick="location.href='/admin/insertNotice.com'">글 등록</button>
+          <button onclick="location.href='/admin/insertNotice.com'"> 글 등록 </button>
           </c:if>
+          </td></tr>
+          </table>
     <%@ include file="/footer.jsp" %>
 </body>
 </html>

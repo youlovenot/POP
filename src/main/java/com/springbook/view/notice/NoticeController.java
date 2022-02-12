@@ -31,7 +31,7 @@ public class NoticeController {
 	public String insertNotice(NoticeVO vo, HttpServletRequest request) throws IOException {
 		// 파일 업로드 처리
 		MultipartFile uploadFile = vo.getUploadFile();
-		String path = "/goodsShop/img/";
+		String path = "/notice/img/";
 		ServletContext context= request.getSession().getServletContext();
 		path=context.getRealPath(path);
 		System.out.println("파일저장경로 : " +path);

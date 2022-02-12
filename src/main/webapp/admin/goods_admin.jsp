@@ -62,7 +62,7 @@
             <tr class="tr">
                 <td>${goods.seq }</td>
                 <td><img src="${imgpath }${goods.pimage}" width="100px" height="100px" onclick="window.open(this.src,'info','width='+this.naturalWidth+' height='+this.naturalHeight+' menubar=no status=no toolbar=no location=no'); return false;" style="cursor:pointer;"></td>
-                <td>${goods.name }</td>
+                <td><a href="/goods_view.com?seq=${goods.seq }">${goods.name }</a></td>
                 <td>${goods.price }원</td>
                 <td>${goods.stock }</td>
                 <td>
