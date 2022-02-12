@@ -28,6 +28,7 @@ public class GoodsController {
 	// 상품 등록
 	@RequestMapping("/insertGoods.com")
 	public String insertGoods(GoodsVO vo, HttpServletRequest request) throws IOException {
+		System.out.println("굿즈등록 처리");
 		String path = "/goodsShop/img/";
 		ServletContext context= request.getSession().getServletContext();
 		path=context.getRealPath(path);
@@ -44,7 +45,6 @@ public class GoodsController {
 			}
 		}
 		vo.setDetails(fileNames);
-		
 		MultipartFile uploadFile = vo.getImgupload();
 		if(!uploadFile.isEmpty()) {
 			String extension = uploadFile.getOriginalFilename();
@@ -53,7 +53,6 @@ public class GoodsController {
 			uploadFile.transferTo(new File(path + fileName));
 			vo.setPimage(fileName);
 		}
-		
 		goodsService.insertGoods(vo);
 		return "redirect:/admin/goods.com";
 	}
@@ -69,6 +68,7 @@ public class GoodsController {
 	// 상품관리 페이지
 	@RequestMapping("/admin/goods.com")
 	public ModelAndView getGoodsListA(GoodsVO vo) {
+		System.out.println("굿즈관리페이지 이동");
 		ModelAndView mav = new ModelAndView();
 		// Null Check
 		if(vo.getSearchCondition()==null) vo.setSearchCondition("SEQ");
@@ -82,6 +82,7 @@ public class GoodsController {
 	// 상품 목록 페이지
 	@RequestMapping("/goods.com")
 	public ModelAndView getGoodsList(GoodsVO vo) {
+		System.out.println("굿즈목록페이지 이동");
 		ModelAndView mav = new ModelAndView();
 		// Null Check
 		if(vo.getSearchCondition()==null) vo.setSearchCondition("SEQ");
@@ -95,6 +96,7 @@ public class GoodsController {
 	// 상품 상세 페이지
 	@RequestMapping("/goods_view.com")
 	public ModelAndView getGoods(GoodsVO vo) {
+		System.out.println("굿즈상세뷰페이지 이동");
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("/goodsShop/product_detail.jsp");
 		mav.addObject("goods", goodsService.getGoods(vo));

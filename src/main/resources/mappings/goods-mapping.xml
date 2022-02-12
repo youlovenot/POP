@@ -42,4 +42,9 @@
 		</if>
 		order by seq asc
 	</select>
+	
+	<select id="getNewGoodsList" resultMap="goodsResult">
+		select * from goods
+		order by regdate desc limit 4
+	</select>
 </mapper>

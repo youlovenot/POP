@@ -34,41 +34,32 @@ public class NoticeController {
 		String path = "/notice/img/";
 		ServletContext context= request.getSession().getServletContext();
 		path=context.getRealPath(path);
-		System.out.println("파일저장경로 : " +path);
+		System.out.println("공지등록 처리");
+		System.out.println("이미지파일저장경로 : " +path);
 		if(!uploadFile.isEmpty()) {
 			String fileName = uploadFile.getOriginalFilename();
 			uploadFile.transferTo(new File(path + fileName));
 			vo.setImage(fileName);
 		}
-		
 		noticeService.insertNotice(vo);
 		return "redirect:/noticeList.com";
 	}
 	
 	@RequestMapping(value="/admin/insertNotice.com", method=RequestMethod.GET)
 	public String NoticeUploadView(NoticeVO vo) {
+		System.out.println("공지등록페이지 이동");
 		return "/notice/notice_upload.jsp";
 	}
 	
-	// 글 수정
-	@RequestMapping("/test/updateNotice.do")
-	public String updateNotice(@ModelAttribute("notice") NoticeVO vo) {
-		noticeService.updateNotice(vo);
-		return "redirect:getNoticeList.do";
-	}
-	
-	// 글 삭제
-	@RequestMapping("/test/deleteNotice.do")
-	public String deleteNotice(NoticeVO vo) {
-		noticeService.deleteNotice(vo);
-		return "redirect:getNoticeList.do";
-	}
-	
 	// 글 상세 조회
-	@RequestMapping("/test/getNotice.do")
-	public String getNotice(NoticeVO vo, Model model) {
+	@RequestMapping("/notice_view.com")
+	public ModelAndView getNotice(NoticeVO vo, Model model) {
+		ModelAndView mav = new ModelAndView();
+		System.out.println("공지상세뷰페이지 이동");
+		mav.setViewName("/notice/notice.jsp");		// View 이름 리턴
 		model.addAttribute("notice", noticeService.getNotice(vo));		// Model 정보 저장
-		return "getNotice.jsp";		// View 이름 리턴
+		mav.addObject("imgpath", "/notice/img/");
+		return mav;
 	}
 	
 	// 검색 조건 목록 설정
@@ -83,6 +74,7 @@ public class NoticeController {
 	//글 목록 검색
 	@RequestMapping("/noticeList.com")
 	public ModelAndView getNoticeList(NoticeVO vo) {
+		System.out.println("공지목록페이지 이동");
 		ModelAndView mav = new ModelAndView();
 		// Null Check
 		if(vo.getSearchCondition()==null) vo.setSearchCondition("TITLE");

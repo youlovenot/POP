@@ -169,7 +169,7 @@
       <div class="clear"></div>
       <ul class="section_name">
         <li class="title">GOODS SHOP</li>
-        <li><a id="more_items" href="/shop/goods.jsp">
+        <li><a id="more_items" href="/goods.com">
           <div class="plus">더보기 +</div>
         </a></li>
       </ul>

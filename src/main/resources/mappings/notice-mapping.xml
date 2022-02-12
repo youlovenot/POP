@@ -19,21 +19,9 @@
 		]]>
 	</insert>
 	
-	<update id="updateNotice">
-		<![CDATA[
-			update board set title=#{title}, content=#{content} where seq=#{seq}
-		]]>
-	</update>
-	
-	<delete id="deleteNotice">
-		<![CDATA[
-			delete board where seq=#{seq}
-		]]>
-	</delete>
-	
 	<select id="getNotice" resultType="notice">
 		<![CDATA[
-			select * from board where seq=#{seq}
+			select * from notice where seq=#{seq}
 		]]>
 	</select>
 	

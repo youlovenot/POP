@@ -29,14 +29,14 @@ public class MemberController {
 	public String loginView(HttpServletRequest request, HttpSession session) {
 		String referer = request.getHeader("Referer");
 		session.setAttribute("redirectURI", referer);
-		System.out.println("로그인 화면으로 이동");
+		System.out.println("로그인페이지 이동");
 		return "/member/login.jsp";
 	}
 	@RequestMapping(value="/login.com", method=RequestMethod.POST)
 	public ModelAndView login(MemberVO vo, HttpSession session) throws IOException {
 		ModelAndView mav = new ModelAndView();
 		MemberVO member = memberService.getMember(vo);
-		System.out.println("로그인 인증 처리...");
+		System.out.println("로그인 처리");
 		if(member != null) {
 			String referer = (String) session.getAttribute("redirectURI");
 			session.setAttribute("memberName", member.getName());
@@ -54,6 +54,7 @@ public class MemberController {
 	// 로그아웃 처리
 	@RequestMapping("/logout.com")
 	public String logout(HttpSession session, HttpServletRequest request) {
+		System.out.println("로그아웃 처리");
 		session.invalidate();
 		String Cpath = request.getHeader("Referer");
 		int fidx = Cpath.indexOf("/",7);
@@ -68,6 +69,7 @@ public class MemberController {
 	// 회원가입 처리
 	@RequestMapping(value="/join.com", method=RequestMethod.GET)
 	public ModelAndView joinView() {
+		System.out.println("회원가입페이지 이동");
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("member", new MemberVO());
 		mav.setViewName("/member/join.jsp");
@@ -75,6 +77,7 @@ public class MemberController {
 	}
 	@RequestMapping(value="/join.com", method=RequestMethod.POST)
 	public String insertMember(MemberVO vo) {
+		System.out.println("회원가입 처리");
 		memberService.insertMember(vo);
 		return "/";
 	}
@@ -82,6 +85,7 @@ public class MemberController {
 	// 회원 수정
 	@RequestMapping("/admin/updateMemberP.com")
 	public String updateMember(MemberVO vo) {
+		System.out.println("회원수정 처리");
 		memberService.updateMember(vo);
 		return "redirect:/admin/member.com";
 	}
@@ -89,6 +93,7 @@ public class MemberController {
 	// 회원 탈퇴
 	@RequestMapping("/deleteMember.com")
 	public String deleteMember(MemberVO vo) {
+		System.out.println("회원탈퇴 처리");
 		memberService.deleteMember(vo);
 		return "redirect:/admin/member.com";
 	}
@@ -96,6 +101,7 @@ public class MemberController {
 	// 회원 수정페이지 이동
 	@RequestMapping("/admin/updateMember.com")
 	public ModelAndView getMember(MemberVO vo) {
+		System.out.println("회원탈퇴페이지 이동");
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("/member/join.jsp");
 		mav.addObject("member", memberService.getMember(vo));
@@ -113,6 +119,7 @@ public class MemberController {
 	
 	@RequestMapping("/admin/member.com")
 	public ModelAndView getMemberList(MemberVO vo) {
+		System.out.println("회원관리페이지 이동");
 		ModelAndView mav = new ModelAndView();
 		// Null Check
 		if(vo.getSearchMCondition()==null) vo.setSearchMCondition("ID");

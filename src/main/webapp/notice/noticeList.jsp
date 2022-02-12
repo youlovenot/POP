@@ -8,6 +8,12 @@
   <script src="/js/index.js"></script>
   <link rel="shortcut icon" type="image⁄x-icon" href="/img/favicon.ico">
   <style type="text/css">
+  a {
+  color: black;
+  }
+  a:link {
+  text-decoration: none;
+  }
   .board_list_table{
       margin:50px 0 100px 200px;
       text-align: center;
@@ -68,7 +74,7 @@ form #notice
             <li class="title_a">공지사항</li>
           </ul>
           <!-- 멤버 검색 -->
-          <FORM method="post" action="/admin/member.com">
+          <FORM method="post" action="/noticeList.com">
             <TABLE class="search">
              <TR>
               <TD class="search_select"> 
