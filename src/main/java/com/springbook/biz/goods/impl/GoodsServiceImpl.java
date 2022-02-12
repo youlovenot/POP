@@ -21,6 +21,10 @@ public class GoodsServiceImpl implements GoodsService {
 		return goodsDAO.getGoodsList(vo);
 	}
 
+	public List<GoodsVO> getNewGoodsList(GoodsVO vo) {
+		return goodsDAO.getNewGoodsList(vo);
+	}
+
 	public GoodsVO getGoods(GoodsVO vo) {
 		return goodsDAO.getGoods(vo);
 	}

@@ -175,42 +175,17 @@
       </ul>
 
       <div id="panorama_items">
-        <div class="item_box">
-          <ul>
-            <a href="/shop/product_detail.jsp">
-              <li><img src="/img/goods/goods1.png"></li>
-              <li>팝콘 키홀더 </li>
-              <li>8,900원</li>
-            </a>
-          </ul>
-        </div>
-        <div class="item_box">
-          <ul>
-            <a href="/shop/product_detail.jsp">
-              <li><img src="/img/goods/goods12.png"></li>
-              <li>팝콘모양 오프너</li>
-              <li>8,000원</li>
-            </a>
-          </ul>
-        </div>
-        <div class="item_box">
-          <ul>
-            <a href="/shop/product_detail.jsp">
-              <li><img src="/img/goods/goods13.png"></li>
-              <li>팝콘 에어팟 케이스</li>
-              <li>18,000원</li>
-            </a>
-          </ul>
-        </div>
-        <div class="item_box">
-          <ul>
-            <a href="/shop/product_detail.jsp">
-              <li><img src="/img/goods/goods10.png"></li>
-              <li>팝콘 포켓 패브릭 포스터</li>
-              <li>24,000원</li>
-            </a>
-          </ul>
-        </div>
+	      <c:forEach items="${goodsList }" var="goods">
+	        <div class="item_box">
+	          <ul>
+	            <a href="/goods_view.com?seq=${goods.seq }">
+	              <li><img src="${goodsImgpath }${goods.pimage}"></li>
+	              <li>${goods.name } </li>
+	              <li>{goods.price }원</li>
+	            </a>
+	          </ul>
+	        </div>
+	      </c:forEach>
       </div>
       <div class="clear"></div>
       <ul class="section_name">

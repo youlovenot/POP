@@ -21,6 +21,10 @@ public class GoodsDAO {
 		return mybatis.selectList("GoodsDAO.getGoodsList", vo);
 	}
 	
+	public List<GoodsVO> getNewGoodsList(GoodsVO vo) {
+		return mybatis.selectList("GoodsDAO.getNewGoodsList", vo);
+	}
+	
 	public GoodsVO getGoods(GoodsVO vo) {
 		return mybatis.selectOne("GoodsDAO.getGoods", vo);
 	}
