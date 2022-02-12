@@ -5,11 +5,15 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -23,17 +27,27 @@ public class NoticeController {
 	@Autowired
 	private NoticeService noticeService;
 	// 글 등록
-	@RequestMapping("/test/insertNotice.do")
-	public String insertNotice(NoticeVO vo) throws IOException {
+	@RequestMapping(value="/admin/insertNotice.com", method=RequestMethod.POST )
+	public String insertNotice(NoticeVO vo, HttpServletRequest request) throws IOException {
 		// 파일 업로드 처리
 		MultipartFile uploadFile = vo.getUploadFile();
+		String path = "/goodsShop/img/";
+		ServletContext context= request.getSession().getServletContext();
+		path=context.getRealPath(path);
+		System.out.println("파일저장경로 : " +path);
 		if(!uploadFile.isEmpty()) {
 			String fileName = uploadFile.getOriginalFilename();
-			uploadFile.transferTo(new File("C:/upload/" + fileName));
+			uploadFile.transferTo(new File(path + fileName));
+			vo.setImage(fileName);
 		}
 		
 		noticeService.insertNotice(vo);
-		return "redirect:getNoticeList.do";
+		return "redirect:/noticeList.com";
+	}
+	
+	@RequestMapping(value="/admin/insertNotice.com", method=RequestMethod.GET)
+	public String NoticeUploadView(NoticeVO vo) {
+		return "/notice/notice_upload.jsp";
 	}
 	
 	// 글 수정

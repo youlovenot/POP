@@ -15,7 +15,7 @@
 	<insert id="insertNotice" parameterType="notice">
 		<![CDATA[
 			insert into notice(seq, title, content, image)
-			values((select nvl(max(seq), 0)+1 from board),#{title},#{content},#{image})
+			values((select IFNULL(max(seq), 0)+1 from notice),#{title},#{content},#{image})
 		]]>
 	</insert>
 	

@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -24,8 +27,10 @@ public class GoodsController {
 
 	// 상품 등록
 	@RequestMapping("/insertGoods.com")
-	public String insertGoods(GoodsVO vo) throws IOException {
-		String path = "C:/LSH/POP/src/main/webapp/goodsShop/img/";
+	public String insertGoods(GoodsVO vo, HttpServletRequest request) throws IOException {
+		String path = "/goodsShop/img/";
+		ServletContext context= request.getSession().getServletContext();
+		path=context.getRealPath(path);
 		MultipartFile[] getUpload = vo.getDupload();
 		String[] fileNames = new String[5];
 		for(int i=0;i<5;i++) {

@@ -26,7 +26,7 @@ select * from member;
 create table notice(
 	seq int primary key,
     title varchar(20) not null,
-    content text,
+    content varchar(1000),
     image varchar(20),
     regDate datetime default CURRENT_TIMESTAMP
 	);
