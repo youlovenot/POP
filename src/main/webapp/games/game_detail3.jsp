@@ -20,16 +20,16 @@
                     <h3><span>Game</span></h3>
                     <section id="summary1">
                         <div class="image">
-                            <img src="/img/flashgame/루미큐브.jfif">
+                            <img src="/img/flashgame/리듬 메인.png">
                         </div>
                     </section>
                     <section id="summary2">
-                        <h3>루미큐브</h3>
+                        <h3>리듬게임</h3>
                         <div class="item">
                             <ul>
                                 <li>
                                     <div class="col1">게임인원</div>
-                                    <div class="col2">2~4명</div>
+                                    <div class="col2">1명</div>
                                     <div class="clear"></div>
                                 </li>
                                 <li>
@@ -39,7 +39,7 @@
                                 </li>
                                 <li>
                                     <div class="col1">게임시간</div>
-                                    <div class="col2">약 20분 내외</div>
+                                    <div class="col2">약 10분 내외</div>
                                     <div class="clear"></div>
                                 </li>
                             </ul>
@@ -53,12 +53,9 @@
                 <section id="explanation">
                     <h3>게임 설명</h3>
                     <div class="detail">
-                        <img src="/img/flashgame/ex1.jpg">
-                        <img src="/img/flashgame/ex2.jfif">
-                        <img src="/img/flashgame/ex3.jfif">
-                        <img src="/img/flashgame/ex4.png">
-                        <img src="/img/flashgame/ex5.png">
-                        <img src="/img/flashgame/ex6.png">
+                        <img src="/img/flashgame/리듬1.png">
+                        <img src="/img/flashgame/리듬2.png">
+                        <img src="/img/flashgame/리듬3.png">
                     </div>
                 </section>
             </section>
