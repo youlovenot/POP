@@ -52,14 +52,18 @@ create table goods(
 );
  select * from goods;
 
-create table boardgame(
-	pId int(4) primary key,   /*상품번호*/
-    pName varchar(100),		  /*상품이름*/
-    pPrice int(10),			  /*상품가격*/
-    pStock int(3),			  /*상품재고*/
-	pDetail text,	  		  /*상품설명*/
-    pImage varchar(4000),     /*상품이미지*/
-    pDate datetime default CURRENT_TIMESTAMP	 /*상품등록날짜*/
+create table boardgames(
+	seq int primary key,   /*상품번호*/
+    name varchar(100),		  /*상품이름*/
+    price int,			  /*상품가격*/
+    stock int,			  /*상품재고*/
+	detail1 varchar(100),	  		  /*상품설명*/
+	detail2 varchar(100),	  		  /*상품설명*/
+	detail3 varchar(100),	  		  /*상품설명*/
+	detail4 varchar(100),	  		  /*상품설명*/
+	detail5 varchar(100),	  		  /*상품설명*/
+    pimage varchar(100),     /*상품이미지*/
+    regDate datetime default CURRENT_TIMESTAMP	 /*상품등록날짜*/
 );
 
 

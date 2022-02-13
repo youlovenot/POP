@@ -6,7 +6,7 @@
 
 <footer>
       <div id="footer_wrap">
-        <div class="f_logo"><a href="/index.jsp"><img src="/img/footer_logo.png"></a></div>
+        <div class="f_logo"><a href="/POPGames.com"><img src="/img/footer_logo.png"></a></div>
         <ul id="vision">
           <li><a href="#">회사소개</a></li>
           <li><a href="#">게임소개</a></li>

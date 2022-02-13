@@ -181,7 +181,7 @@
 	            <a href="/goods_view.com?seq=${goods.seq }">
 	              <li><img src="${goodsImgpath }${goods.pimage}"></li>
 	              <li>${goods.name } </li>
-	              <li>{goods.price }원</li>
+	              <li>${goods.price }원</li>
 	            </a>
 	          </ul>
 	        </div>
@@ -190,47 +190,23 @@
       <div class="clear"></div>
       <ul class="section_name">
         <li class="title">BOARD GAME SHOP</li>
-        <li><a id="more_items" href="/shop/board_game.jsp">
+        <li><a id="more_items" href="/boardgames.com">
           <div class="plus">더보기 +</div>
         </a></li>
       </ul>
       <div id="panorama_items">
+      
+      <c:forEach items="${boardList }" var="boardGame">
         <div class="item_box">
           <ul>
-            <a href="/shop/product_detail.jsp">
-              <li><img src="/img/boardgame/boardgame1.png"></li>
-              <li>13일의 금요일 </li>
-              <li>15,000원</li>
+            <a href="/boardgames_view.com?seq=${boardGame.seq }">
+              <li><img src="${boardgamesImgpath }${boardGame.pimage}"></li>
+	              <li>${boardGame.name } </li>
+	              <li>${boardGame.price }원</li>
             </a>
           </ul>
         </div>
-        <div class="item_box">
-          <ul>
-            <a href="/shop/product_detail.jsp">
-              <li><img src="/img/boardgame/boardgame2.png"></li>
-              <li>할리갈리 카카오프렌즈</li>
-              <li>24,000원</li>
-            </a>
-          </ul>
-        </div>
-        <div class="item_box">
-          <ul>
-            <a href="/shop/product_detail.jsp">
-              <li><img src="/img/boardgame/boardgame3.png"></li>
-              <li>스플렌더</li>
-              <li>43,000원</li>
-            </a>
-          </ul>
-        </div>
-        <div class="item_box">
-          <ul>
-            <a href="/shop/product_detail.jsp">
-              <li><img src="/img/boardgame/boardgame4.png"></li>
-              <li>루미큐브 (타일주머니 증정)</li>
-              <li>55,000원</li>
-            </a>
-          </ul>
-        </div>
+       </c:forEach>
       </div>
       <div class="footer_banner"><img src="/img/footer_banner1.png"></div>
       <a href=""></a>

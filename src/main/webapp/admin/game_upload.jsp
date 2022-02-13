@@ -33,12 +33,12 @@ div#container_box { float:right; width:calc(100% - 200px - 20px); }
     <header>
       <div id="header">
         <div id="header_top">
-          <div id="main_logo"><a href="/"><img src="/img/main_logo2.png"></a></div>
+          <div id="main_logo"><a href="/POPGames.com"><img src="/img/main_logo2.png"></a></div>
         <ul id="top_menu">
           <li><a href="/logout.com">로그아웃</a></li>
           <li><a href="/admin/member.com">회원관리</a></li>
           <li><a href="/admin/goods.com">굿즈</a></li>
-          <li><a href="/admin/board_admin.jsp">보드게임</a></li>
+          <li><a href="/admin/boardgames.com">보드게임</a></li>
           <li><a href="/admin/game_admin.jsp">게임</a></li>
         </ul>
         </div>

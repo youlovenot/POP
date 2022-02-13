@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="BoardgamesDAO">
+
+	<resultMap id="boardResult" type="boardgames">
+		<id property="seq" column="SEQ"/>
+		<result property="name" column="NAME"/>
+		<result property="price" column="PRICE"/>
+		<result property="stock" column="STOCK"/>
+		<result property="detail1" column="DETAIL1"/>
+		<result property="detail2" column="DETAIL2"/>
+		<result property="detail3" column="DETAIL3"/>
+		<result property="detail4" column="DETAIL4"/>
+		<result property="detail5" column="DETAIL5"/>
+		<result property="pimage" column="PIMAGE"/>
+		<result property="regDate" column="REGDATE"/>
+	</resultMap>
+
+	<insert id="insertBoardgames" parameterType="boardgames">
+		<![CDATA[
+			insert into boardgames(seq, name, price, stock, detail1, detail2, detail3, detail4, detail5, pimage)
+			values(#{seq},#{name},#{price},#{stock},#{detail1},#{detail2},#{detail3},#{detail4},#{detail5},#{pimage})
+		]]>
+	</insert>
+	
+	<select id="getBoardgames" resultType="boardgames">
+		<![CDATA[
+			select * from boardgames where seq=#{seq}
+		]]>
+	</select>
+	
+	<select id="getBoardgamesList" resultMap="boardResult">
+		select * from boardgames
+		where
+		<if test="searchCondition == 'SEQ'">
+			seq like CONCAT('%',#{searchKeyword},'%')
+		</if>
+		<if test="searchCondition == 'NAME'">
+			name like CONCAT('%',#{searchKeyword},'%')
+		</if>
+		order by seq asc
+	</select>
+	
+	<select id="getNewBoardgamesList" resultMap="boardResult">
+		select * from boardgames
+		order by regdate desc limit 4
+	</select>
+</mapper>

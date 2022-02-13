@@ -29,11 +29,11 @@
 <header>
       <div id="header">
         <div id="header_top">
-          <div id="main_logo"><a href="/"><img src="/img/main_logo2.png"></a></div>
+          <div id="main_logo"><a href="/POPGames.com"><img src="/img/main_logo2.png"></a></div>
         <ul id="top_menu">
           <li><a href="/games/gameList.jsp">GAME</a></li>
           <li><a href="/goods.com">GOODS SHOP</a></li>
-          <li><a href="/boardGameShop/board_game.jsp">BOARD GAME SHOP</a></li>
+          <li><a href="/boardgames.com">BOARD GAME SHOP</a></li>
         </ul>
         
           <ul id="join_menu" class="navi">

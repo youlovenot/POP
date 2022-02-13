@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 <html lang="ko">
 <head>
   <title>pop games</title>
@@ -9,19 +10,26 @@
   <link href="/css/common.css" rel="stylesheet" type="text/css">
   <link href="/css/admin.css" rel="stylesheet" type="text/css">
    <link href="/css/header.css" rel="stylesheet" type="text/css">
-  
+   <style type="text/css">
+	a {
+		color: black;
+	}
+	a:link {
+		text-decoration: none;
+	}
+  </style>
 </head>
 <body>
   <div id="container">
      <header>
       <div id="header">
         <div id="header_top">
-          <div id="main_logo"><a href="/"><img src="/img/main_logo2.png"></a></div>
+          <div id="main_logo"><a href="/POPGames.com"><img src="/img/main_logo2.png"></a></div>
         <ul id="top_menu">
         <li><a href="/logout.com">로그아웃</a></li>
           <li><a href="/admin/member.com">회원관리</a></li>
           <li><a href="/admin/goods.com">굿즈</a></li>
-          <li><a href="/admin/board_admin.jsp">보드게임</a></li>
+          <li><a href="/admin/boardgames.com">보드게임</a></li>
           <li><a href="/admin/game_admin.jsp">게임</a></li>
         </ul>
         </div>
@@ -29,121 +37,64 @@
     </header>
     <main>
          <ul class="section">
-            <li class="title_a">보드게임샵 관리</li>
+            <li class="title_a">보드게임 관리</li>
           </ul>
-          <FORM method="post" name="msgsearch" action="/admin/admin.jsp">
+          <FORM method="post" action="/admin/boardgames.com">
             <TABLE class="search">
              <TR>
               <TD class="search_select"> 
-               <SELECT name=stype >
-                <OPTION value=1 >이름
-                <OPTION value=2 >회원ID
+               <SELECT name="searchCondition" >
+				<c:forEach items="${boardgamesConditionMap }" var="option">
+					<option value="${option.value }">${option.key }
+				</c:forEach>
                </SELECT>
               </TD>
               <TD class="search_select">
-               <INPUT type=text size="17" name="sval" >
+               <INPUT type=text size="17" name="searchKeyword" >
               </TD>
-              <TD class="search_select"><a href="#" onClick="check();"><img src="/img/serach.gif"></A></TD>
+              <TD class="search_select"><input type="image" src="/img/serach.gif"></TD>
              </TR>
             </TABLE>
             </FORM>
           <table class="table">
             <tr class="tr">
-                <th>회원ID</th>
-                <th>이름</th>
-                <th>Email</th>
-                <th>전화번호</th>
-                <th>주소</th>
-                <th>수정 및 삭제</th>
+                <th>상품번호</th>
+                <th>상품이미지</th>
+                <th>상품명</th>
+                <th>가격</th>
+                <th>재고</th>
+                <th>상품설명</th>
             </tr>
+            
+			<c:forEach items="${BoardList }" var="boardgame">
             <tr class="tr">
-                <td>회원ID</td>
-                <td>이름</td>
-                <td>Email</td>
-                <td>전화번호</td>
-                <td>주소</td>
+                <td>${boardgame.seq }</td>
+                <td><img src="${imgpath }${boardgame.pimage}" width="100px" height="100px" onclick="window.open(this.src,'info','width='+this.naturalWidth+' height='+this.naturalHeight+' menubar=no status=no toolbar=no location=no'); return false;" style="cursor:pointer;"></td>
+                <td><a href="/boardgames_view.com?seq=${boardgame.seq }">${boardgame.name }</a></td>
+                <td>${boardgame.price }원</td>
+                <td>${boardgame.stock }</td>
                 <td>
-                    <button>수정</button>
-                    <button>삭제</button>
-                </td>
+                	<c:if test="${not empty boardgame.detail1 }">
+                	<img src="${imgpath}${boardgame.detail1 }" width="100px" height="100px" class="click_img" style="cursor:pointer" onclick="window.open(this.src,'info','width='+this.naturalWidth+' height='+this.naturalHeight+'menubar=no status=no toolbar=no location=no'); return false;"> 
+                	</c:if>
+                	<c:if test="${not empty boardgame.detail2 }">
+                	<img src="${imgpath}${boardgame.detail2 }" width="100px" height="100px" class="click_img" style="cursor:pointer" onclick="window.open(this.src,'info','width='+this.naturalWidth+' height='+this.naturalHeight+' menubar=no status=no toolbar=no location=no'); return false;"> 
+                	</c:if>
+                	<c:if test="${not empty boardgame.detail3 }">
+                	<img src="${imgpath}${boardgame.detail3 }" width="100px" height="100px" class="click_img" style="cursor:pointer" onclick="window.open(this.src,'info','width='+this.naturalWidth+' height='+this.naturalHeight+' menubar=no status=no toolbar=no location=no'); return false;">
+                	</c:if>
+                	<c:if test="${not empty boardgame.detail4 }">
+                	<img src="${imgpath}${boardgame.detail4 }" width="100px" height="100px" class="click_img" style="cursor:pointer" onclick="window.open(this.src,'info','width='+this.naturalWidth+' height='+this.naturalHeight+' menubar=no status=no toolbar=no location=no'); return false;"> 
+                	</c:if>
+                	<c:if test="${not empty boardgame.detail5 }">
+                	<img src="${imgpath}${boardgame.detail5 }" width="100px" height="100px" class="click_img" style="cursor:pointer" onclick="window.open(this.src,'info','width='+this.naturalWidth+' height='+this.naturalHeight+' menubar=no status=no toolbar=no location=no'); return false;">
+                	</c:if></td>
             </tr>
-            <tr class="tr">
-                <td>회원ID</td>
-                <td>이름</td>
-                <td>Email</td>
-                <td>전화번호</td>
-                <td>주소</td>
-                <td>
-                    <button>수정</button>
-                    <button>삭제</button>
-                </td>
-            </tr>
-            <tr class="tr">
-                <td>회원ID</td>
-                <td>이름</td>
-                <td>Email</td>
-                <td>전화번호</td>
-                <td>주소</td>
-                <td>
-                    <button>수정</button>
-                    <button>삭제</button>
-                </td>
-            </tr>
-            <tr class="tr">
-                <td>회원ID</td>
-                <td>이름</td>
-                <td>Email</td>
-                <td>전화번호</td>
-                <td>주소</td>
-                <td>
-                    <button>수정</button>
-                    <button>삭제</button>
-                </td>
-            </tr>
-            <tr class="tr">
-                <td>회원ID</td>
-                <td>이름</td>
-                <td>Email</td>
-                <td>전화번호</td>
-                <td>주소</td>
-                <td>
-                    <button>수정</button>
-                    <button>삭제</button>
-                </td>
-            </tr>
-            <tr class="tr">
-                <td>회원ID</td>
-                <td>이름</td>
-                <td>Email</td>
-                <td>전화번호</td>
-                <td>주소</td>
-                <td>
-                    <button>수정</button>
-                    <button>삭제</button>
-                </td>
-            </tr>
-            <tr class="tr">
-                <td>회원ID</td>
-                <td>이름</td>
-                <td>Email</td>
-                <td>전화번호</td>
-                <td>주소</td>
-                <td>
-                    <button>수정</button>
-                    <button>삭제</button>
-                </td>
-            </tr>
-            <tr class="tr">
-                <td>회원ID</td>
-                <td>이름</td>
-                <td>Email</td>
-                <td>전화번호</td>
-                <td>주소</td>
-                <td>
-                    <button>수정</button>
-                    <button>삭제</button>
-                </td>
-            </tr>
+            </c:forEach>
+            
+          <tr><td colspan="6" style="padding-top: 10px; padding-right: 100px; text-align: right">
+          <button onclick="location='/admin/board_upload.jsp'" style="width: 80px; height: 30px">추가</button>
+          </td></tr>
           </table>
     </main>
     <div class="clear"></div>
