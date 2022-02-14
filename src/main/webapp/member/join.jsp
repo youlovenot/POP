@@ -87,10 +87,10 @@
     <%@ include file="/header.jsp" %>
      <main class="main">
       <ul class="section_name">
-    <c:if test="${empty member }">
+    <c:if test="${empty member.id }">
         <li class="title">회원가입</li>
     </c:if>
-    <c:if test="${not empty member }">
+    <c:if test="${not empty member.id }">
         <li class="title">회원수정</li>
     </c:if>
       </ul>
@@ -98,10 +98,10 @@
 <div id="wrapper">
     <!-- content-->
     <div id="content">
-    <c:if test="${empty member }">
+    <c:if test="${empty member.id }">
     <form action="/join.com" method="post">
     </c:if>
-    <c:if test="${not empty member }">
+    <c:if test="${not empty member.id }">
     <form action="/admin/updateMemberP.com" method="post">
     </c:if>
         <!-- ID -->
@@ -110,10 +110,10 @@
                 <label for="id">아이디</label>
             </h3>
             <span class="box int_id">
-            	<c:if test="${not empty member }">
-                <input type="text" name="id" id="id" class="int" maxlength="20" value="${member.id }" disabled>
+            	<c:if test="${not empty member.id }">
+                <input type="text" name="id" id="id" class="int" maxlength="20" value="${member.id }" readonly>
                 </c:if>
-            	<c:if test="${empty member }">
+            	<c:if test="${empty member.id }">
                 <input type="text" name="id" id="id" class="int" maxlength="20">
                 </c:if>
             </span>
@@ -176,10 +176,10 @@
         </div>
         <!-- JOIN BTN-->
         <div class="btn_area">
-            <c:if test="${not empty member }">
+            <c:if test="${not empty member.id }">
             	<input type="submit" id="btnJoin" value="정보수정">
             </c:if>
-            <c:if test="${empty member }">
+            <c:if test="${empty member.id }">
             	<input type="submit" id="btnJoin" value="가입하기">
             </c:if>
         </div>
